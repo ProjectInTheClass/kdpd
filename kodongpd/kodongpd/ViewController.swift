@@ -33,9 +33,9 @@ class ViewController: UIViewController {
          [String:Any]
          print(employeedata)
             let em = employeedata!
-         print(em["role"]!)*/
+         print(em["role"]!)
          }
-        
+        */
         //업데이트
         /*
          let updates = ["someid/name":"John", "-LWKOd5G6Iff7xsemjM0/name":"David"]
