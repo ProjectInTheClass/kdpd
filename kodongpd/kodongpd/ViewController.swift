@@ -1,20 +1,14 @@
-//
-//  ViewController.swift
-//  kodongpd
-//
-//  Created by dgulinc on 17/01/2019.
-//  Copyright © 2019 dgulinc. All rights reserved.
-//
+
 
 import UIKit
 import FirebaseDatabase
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ref = Database.database().reference()
+        //let ref = Database.database().reference()
         
        // ref.child("someid/name").setValue("Mike") //database에 있는 이름 바꾸기
         
@@ -43,11 +37,13 @@ class ViewController: UIViewController {
          */
         //삭제
         //ref.child("-LWPDp8Y-SvbRFj031x2").removeValue()
-        
-        
+       
 
     }
 
 
 }
+
+
+
 
