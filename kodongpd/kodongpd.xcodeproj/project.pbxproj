@@ -12,6 +12,7 @@
 		0C22DD4221F5BD6E00842BB6 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DD4121F5BD6D00842BB6 /* StoreListViewController.swift */; };
 		0C25B09321FAEB3C00A360ED /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25B09221FAEB3C00A360ED /* LikeViewController.swift */; };
 		0C25B09521FAF03800A360ED /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25B09421FAF03800A360ED /* Models.swift */; };
+		0C25B09721FB032600A360ED /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25B09621FB032600A360ED /* LikeTableViewController.swift */; };
 		0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C267D6D21F70C8500524CFC /* DetailViewController.swift */; };
 		0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C44DE21F0450F00749AAC /* AppDelegate.swift */; };
 		0C3C44E121F0450F00749AAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C44E021F0450F00749AAC /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		0C22DD4121F5BD6D00842BB6 /* StoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
 		0C25B09221FAEB3C00A360ED /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		0C25B09421FAF03800A360ED /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0C25B09621FB032600A360ED /* LikeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewController.swift; sourceTree = "<group>"; };
 		0C267D6D21F70C8500524CFC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0C3C44DB21F0450F00749AAC /* kodongpd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kodongpd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3C44DE21F0450F00749AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				0C267D6D21F70C8500524CFC /* DetailViewController.swift */,
 				0C25B09221FAEB3C00A360ED /* LikeViewController.swift */,
 				0C25B09421FAF03800A360ED /* Models.swift */,
+				0C25B09621FB032600A360ED /* LikeTableViewController.swift */,
 			);
 			path = kodongpd;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				0C25B09521FAF03800A360ED /* Models.swift in Sources */,
 				0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */,
+				0C25B09721FB032600A360ED /* LikeTableViewController.swift in Sources */,
 				0C3C44E121F0450F00749AAC /* ViewController.swift in Sources */,
 				0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */,
 				0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */,
