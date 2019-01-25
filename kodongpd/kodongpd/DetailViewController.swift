@@ -9,7 +9,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var wtLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var btLabel: UILabel!
-    
+    @IBOutlet weak var naeverButton: UIButton!
     var item: Store?
     
     override func viewDidLoad() {

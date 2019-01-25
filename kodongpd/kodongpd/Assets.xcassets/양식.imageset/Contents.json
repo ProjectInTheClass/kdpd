@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "whattoeat.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "양식.png",
       "scale" : "2x"
     },
     {
