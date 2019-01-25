@@ -8,12 +8,36 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+
+var stores : [Store] = []
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        FirebaseApp.configure()
+        
+        let ref = Database.database().reference()
+        
+        for i in 1..<127{
+            
+            ref.child("storeList/store\(i)").observeSingleEvent(of: .value)
+                
+            {(snapshot) in
+                
+                let data = snapshot.value as?
+                    [String:String]
+                
+                stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                
+            }
+            
+        }
+        
         return true
     }
     

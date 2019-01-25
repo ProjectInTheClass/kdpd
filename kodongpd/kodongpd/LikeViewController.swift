@@ -13,11 +13,6 @@ class LikeViewController: UIViewController {
         self.collectionView.reloadData()
        // collectionView.dataSource = self
     }
-    
 
 }
-extension LikeViewController:UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return
-    }
-}
+

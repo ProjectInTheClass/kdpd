@@ -38,6 +38,7 @@ extension CategoryViewController: UICollectionViewDataSource{
         
     }
     
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "CATEGORY_SEGUE"{
 //            if let detailVC = segue.destination as? StoreListViewController, let cell = sender as? UICollectionViewCell{
@@ -47,5 +48,8 @@ extension CategoryViewController: UICollectionViewDataSource{
 //            }
 //        }
 //    }
+
+
+
     
 }
