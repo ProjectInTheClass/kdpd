@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="3988" y="-1564.7676161919042"/>
         </scene>
-        <!--Store List View Controller-->
+        <!--Like View Controller-->
         <scene sceneID="v8k-SA-eqD">
             <objects>
-                <viewController id="8FW-KV-4b5" customClass="StoreListViewController" customModule="kodongpd" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8FW-KV-4b5" customClass="LikeViewController" customModule="kodongpd" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SBb-Zz-flv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,17 +91,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nxk-5a-0Ui">
-                                    <size key="itemSize" width="246" height="261"/>
+                                    <size key="itemSize" width="250" height="266"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="W9S-ic-UL6">
-                                        <rect key="frame" x="2.5" y="0.0" width="246" height="261"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="250" height="266"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="246" height="261"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="266"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrG-RB-G1a">
@@ -134,10 +134,45 @@
                         <viewLayoutGuide key="safeArea" id="dwS-r7-eZq"/>
                     </view>
                     <navigationItem key="navigationItem" id="rqK-wl-9Ov"/>
+                    <connections>
+                        <outlet property="collectionView" destination="uVN-0H-PCp" id="YHy-AZ-ihM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyM-xy-ghL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3988" y="-860"/>
+            <point key="canvasLocation" x="3988" y="-860.41979010494754"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="UhF-3Z-M3y">
+            <objects>
+                <tableViewController id="tYc-lq-cZV" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yLU-Zb-lh4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="kwv-Is-BUn">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="112" id="TSo-la-uAS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TSo-la-uAS" id="889-KE-RTB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tYc-lq-cZV" id="YRe-fJ-ykL"/>
+                            <outlet property="delegate" destination="tYc-lq-cZV" id="Q6U-tT-9Lh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgg-UH-Om7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4728.8000000000002" y="-860.41979010494754"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ipF-ar-jEH">
@@ -487,6 +522,9 @@
                                                 <state key="normal" image="heart"/>
                                                 <state key="selected" image="btn_heart_filled"/>
                                                 <state key="highlighted" image="btn_heart_filled"/>
+                                                <connections>
+                                                    <action selector="handleLike:" destination="aWa-ba-aQw" eventType="touchUpInside" id="ge2-tc-AKi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -889,6 +927,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="O1b-ho-yPg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5So-TB-XlL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

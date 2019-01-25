@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C22DD3C21F59F1100842BB6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DD3B21F59F1100842BB6 /* Category.swift */; };
-		0C22DD3E21F5A52800842BB6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DD3D21F5A52800842BB6 /* CategoryCell.swift */; };
+		0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DD3D21F5A52800842BB6 /* Cells.swift */; };
 		0C22DD4021F5B2A200842BB6 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DD3F21F5B2A200842BB6 /* CategoryViewController.swift */; };
 		0C22DD4221F5BD6E00842BB6 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C22DD4121F5BD6D00842BB6 /* StoreListViewController.swift */; };
 		0C25B09321FAEB3C00A360ED /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25B09221FAEB3C00A360ED /* LikeViewController.swift */; };
-		0C267D6A21F6DE4600524CFC /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C267D6921F6DE4600524CFC /* StoreCell.swift */; };
-		0C267D6C21F6DFF500524CFC /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C267D6B21F6DFF500524CFC /* Store.swift */; };
+		0C25B09521FAF03800A360ED /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C25B09421FAF03800A360ED /* Models.swift */; };
 		0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C267D6D21F70C8500524CFC /* DetailViewController.swift */; };
 		0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C44DE21F0450F00749AAC /* AppDelegate.swift */; };
 		0C3C44E121F0450F00749AAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C44E021F0450F00749AAC /* ViewController.swift */; };
@@ -25,13 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C22DD3B21F59F1100842BB6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		0C22DD3D21F5A52800842BB6 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		0C22DD3D21F5A52800842BB6 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		0C22DD3F21F5B2A200842BB6 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		0C22DD4121F5BD6D00842BB6 /* StoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
 		0C25B09221FAEB3C00A360ED /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
-		0C267D6921F6DE4600524CFC /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
-		0C267D6B21F6DFF500524CFC /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		0C25B09421FAF03800A360ED /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		0C267D6D21F70C8500524CFC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0C3C44DB21F0450F00749AAC /* kodongpd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kodongpd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3C44DE21F0450F00749AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,14 +90,12 @@
 				0C3C44E721F0451000749AAC /* LaunchScreen.storyboard */,
 				0C3C44EA21F0451000749AAC /* Info.plist */,
 				0C3C44F021F0453600749AAC /* GoogleService-Info.plist */,
-				0C22DD3B21F59F1100842BB6 /* Category.swift */,
-				0C22DD3D21F5A52800842BB6 /* CategoryCell.swift */,
+				0C22DD3D21F5A52800842BB6 /* Cells.swift */,
 				0C22DD3F21F5B2A200842BB6 /* CategoryViewController.swift */,
 				0C22DD4121F5BD6D00842BB6 /* StoreListViewController.swift */,
-				0C267D6921F6DE4600524CFC /* StoreCell.swift */,
-				0C267D6B21F6DFF500524CFC /* Store.swift */,
 				0C267D6D21F70C8500524CFC /* DetailViewController.swift */,
 				0C25B09221FAEB3C00A360ED /* LikeViewController.swift */,
+				0C25B09421FAF03800A360ED /* Models.swift */,
 			);
 			path = kodongpd;
 			sourceTree = "<group>";
@@ -240,15 +234,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C25B09521FAF03800A360ED /* Models.swift in Sources */,
 				0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */,
 				0C3C44E121F0450F00749AAC /* ViewController.swift in Sources */,
-				0C22DD3E21F5A52800842BB6 /* CategoryCell.swift in Sources */,
+				0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */,
 				0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */,
-				0C267D6C21F6DFF500524CFC /* Store.swift in Sources */,
-				0C267D6A21F6DE4600524CFC /* StoreCell.swift in Sources */,
 				0C22DD4021F5B2A200842BB6 /* CategoryViewController.swift in Sources */,
 				0C22DD4221F5BD6E00842BB6 /* StoreListViewController.swift in Sources */,
-				0C22DD3C21F59F1100842BB6 /* Category.swift in Sources */,
 				0C25B09321FAEB3C00A360ED /* LikeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

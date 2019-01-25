@@ -10,7 +10,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var btLabel: UILabel!
     @IBOutlet weak var naeverButton: UIButton!
-    var item: Store?
+    var store: Store?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,25 @@ class DetailViewController: UIViewController {
     
     }
     
+    //좋아요 저장
+    @IBAction func handleLike(_ sender: Any){
+        if let store = self.store{
+            if Liked.shared.isLiked(store){
+                Liked.shared.remove(store)
+                likeButton.isSelected = false
+            }
+            else{
+                Liked.shared.add(store)
+                likeButton.isSelected = true
+            }
+        }
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         // 옵셔널
-        if let item = item {
-            storeLabel.text = item.name
+        if let store = store {
+            storeLabel.text = store.name
            /* userNameLabel.text = item.user.name
             if let imageName = item.user.image {
                 userImageView.image = UIImage(named: imageName)
