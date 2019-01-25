@@ -12,6 +12,11 @@ import FirebaseDatabase
 
 var stores : [Store] = []
 
+var Categories = [
+    Category(name:"고기"), Category(name:"한식"),Category(name:"일식") ,Category(name:"중식"),Category(name:"해물"),
+    Category(name:"양식"), Category(name:"카페"),Category(name:"디저트") ,Category(name:"간편"),Category(name:"치킨"),Category(name:"기타")
+]
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

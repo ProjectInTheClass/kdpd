@@ -20,6 +20,8 @@
 		0C3C44E621F0451000749AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C44E521F0451000749AAC /* Assets.xcassets */; };
 		0C3C44E921F0451000749AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C44E721F0451000749AAC /* LaunchScreen.storyboard */; };
 		0C3C44F121F0453600749AAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C44F021F0453600749AAC /* GoogleService-Info.plist */; };
+		402E32E821FB8BB600D4DEA0 /* sendEmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32E721FB8BB600D4DEA0 /* sendEmailTableViewController.swift */; };
+		402E32EA21FB8BD700D4DEA0 /* SSendEmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32E921FB8BD700D4DEA0 /* SSendEmailTableViewController.swift */; };
 		BDF6E04ADFD0DB8115F45C26 /* Pods_kodongpd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		0C3C44E821F0451000749AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C3C44EA21F0451000749AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C3C44F021F0453600749AAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		402E32E721FB8BB600D4DEA0 /* sendEmailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendEmailTableViewController.swift; sourceTree = "<group>"; };
+		402E32E921FB8BD700D4DEA0 /* SSendEmailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSendEmailTableViewController.swift; sourceTree = "<group>"; };
 		9D40F6F54066858BDBEAD98E /* Pods-kodongpd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B38EDCA67AE82E24B4B9A8 /* Pods-kodongpd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.release.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.release.xcconfig"; sourceTree = "<group>"; };
 		BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kodongpd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +103,8 @@
 				0C25B09221FAEB3C00A360ED /* LikeViewController.swift */,
 				0C25B09421FAF03800A360ED /* Models.swift */,
 				0C25B09621FB032600A360ED /* LikeTableViewController.swift */,
+				402E32E721FB8BB600D4DEA0 /* sendEmailTableViewController.swift */,
+				402E32E921FB8BD700D4DEA0 /* SSendEmailTableViewController.swift */,
 			);
 			path = kodongpd;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 				0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */,
 				0C22DD4021F5B2A200842BB6 /* CategoryViewController.swift in Sources */,
 				0C22DD4221F5BD6E00842BB6 /* StoreListViewController.swift in Sources */,
+				402E32E821FB8BB600D4DEA0 /* sendEmailTableViewController.swift in Sources */,
 				0C25B09321FAEB3C00A360ED /* LikeViewController.swift in Sources */,
+				402E32EA21FB8BD700D4DEA0 /* SSendEmailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
