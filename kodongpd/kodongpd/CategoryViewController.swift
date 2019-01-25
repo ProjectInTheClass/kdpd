@@ -43,7 +43,7 @@ extension CategoryViewController: UICollectionViewDataSource{
             if let detailVC = segue.destination as? StoreListViewController, let cell = sender as? UICollectionViewCell{
                 let indexPath = collectionView.indexPath(for: cell)
                 let pickCategory = Categories[indexPath!.row]
-                detailVC.pickCategory = pickCategory
+            //    detailVC.pickCategory = pickCategory
             }
         }
     }

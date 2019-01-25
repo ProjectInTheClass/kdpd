@@ -9,5 +9,8 @@ target 'kodongpd' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'PINRemoteImage', '3.0.0-beta.13'
+  pod 'SVProgressHUD', '~> 2.2'
+  pod 'Alamofire', '5.0.0.beta.1'
   
 end
