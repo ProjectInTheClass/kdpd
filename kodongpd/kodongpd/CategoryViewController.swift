@@ -1,4 +1,5 @@
 import UIKit
+import SVProgressHUD
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
@@ -11,7 +12,12 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //오늘 뭐먹지? 오류를 줄이기 위해서 넣음
+        SVProgressHUD.show()
+        SVProgressHUD.dismiss(withDelay: 2.5)
+        
         collectionView.dataSource = self
+        
     //오늘 뭐먹지? 이미지뷰 밑의 선 보이기
         let borderLayer = CALayer()
         borderLayer.backgroundColor = UIColor.lightGray.cgColor

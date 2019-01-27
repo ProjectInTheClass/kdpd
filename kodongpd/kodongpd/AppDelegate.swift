@@ -2,7 +2,12 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
+// 데이터베이스에서 불러온 가게들 저장
 var stores : [Store] = []
+//추천을 위한 가게들
+var ForRec : [Store] = []
+//추천가게 상세정보를 위한 인덱스
+var id = 0
 
 //카테고리들 저장
 var Categories = [
@@ -32,6 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
                 
+                //랜덤추천을 위한
+                if data!["category"]! != "디저트"{
+                    if data!["category"]! != "카페"{
+                        ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                        
+                        print(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                    }
+                }
             }
             
         }

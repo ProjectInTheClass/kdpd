@@ -17,7 +17,7 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>FirebaseScreenReportingEnable</key>
+	<key>FirebaseScreenReportingEnabled</key>
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
