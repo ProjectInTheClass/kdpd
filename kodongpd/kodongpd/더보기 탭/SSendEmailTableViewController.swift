@@ -1,14 +1,14 @@
+
 import UIKit
 import MessageUI
 
-class sendEmailTableViewController: UITableViewController,  MFMailComposeViewControllerDelegate  {
-
+class SSendEmailTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+    @IBOutlet weak var sendButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        sendButton.layer.cornerRadius = 5
     }
-
-    
+  
     @IBAction func sendEmail(_ sender: Any) {
         let mailComposeViewController = configureMailController()
         if MFMailComposeViewController.canSendMail(){

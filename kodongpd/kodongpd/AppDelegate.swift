@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  kodongpd
-//
-//  Created by dgulinc on 17/01/2019.
-//  Copyright © 2019 dgulinc. All rights reserved.
-//
+
 
 import UIKit
 import Firebase
@@ -19,11 +13,11 @@ var Categories = [
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
         FirebaseApp.configure()
         
         let ref = Database.database().reference()
@@ -70,99 +64,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
-/*
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        FirebaseApp.configure()
-        
-       // let db = Firestore.firestore()
-        
-        
-        
-        let fileManager = FileManager()
-        
-        let desktopPath = "/Users/jeong-inho/2019iOS교육/Concentration/csvjson.json"
-        
-        
-        
-        do {
-            
-            //let contents = try fileManager.contentsOfDirectory(atPath: desktopPath)
-            // let text = try String(contentsOf: desktopPath, encoding: .utf8)
-            
-            // print(text)
-            
-            // let contents = try NSString(contentsOfFile: desktopPath, encoding: String.Encoding.utf8.rawValue)
-            
-            // print(contents)
-            
-            if let data = try String(contentsOfFile: desktopPath).data(using: .utf8){
-                
-                let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String : Any]]
-                
-                
-                
-                for testIndex in json {
-                    
-                    // Add a new document in collection "cities"
-                    
-                    db.collection("testdata").document(testIndex["album"] as! String).setData([
-                        
-                        "album": testIndex["album"]!,
-                        
-                        "year": testIndex["year"]!,
-                        
-                        "US_peak_chart_post": testIndex["US_peak_chart_post"]!
-                        
-                    ]) { err in
-                        
-                        if let err = err {
-                            
-                            print("Error writing document: \(err)")
-                            
-                        } else {
-                            
-                            print("Document successfully written!")
-                            
-                        }
-                        
-                    }
-                    // db.collection("testdata").document(testIndex["album"]).setData(testIndex) { err in
-                    
-                    // if let err = err {
-                    
-                    // print("Error writing document: (err)")
-                    
-                    // } else {
-                    
-                    // print("Document successfully written!")
-                    
-                    // }
-                    
-                    // }
-                    
-                }
-                
-            }
-            
-            
-            
-        } catch let error as NSError {
-            
-            print("Error access directory: \(error)")
-            
-        }
-        
-        
-        
-        
-        
-        return true
-    }
-
-  
-
-*/
+    /*
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+     // Override point for customization after application launch.
+     
+     FirebaseApp.configure()
+     
+     // let db = Firestore.firestore()
+     
+     
+     
+     let fileManager = FileManager()
+     
+     let desktopPath = "/Users/jeong-inho/2019iOS교육/Concentration/csvjson.json"
+     
+     
+     
+     do {
+     
+     //let contents = try fileManager.contentsOfDirectory(atPath: desktopPath)
+     // let text = try String(contentsOf: desktopPath, encoding: .utf8)
+     
+     // print(text)
+     
+     // let contents = try NSString(contentsOfFile: desktopPath, encoding: String.Encoding.utf8.rawValue)
+     
+     // print(contents)
+     
+     if let data = try String(contentsOfFile: desktopPath).data(using: .utf8){
+     
+     let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String : Any]]
+     
+     
+     
+     for testIndex in json {
+     
+     // Add a new document in collection "cities"
+     
+     db.collection("testdata").document(testIndex["album"] as! String).setData([
+     
+     "album": testIndex["album"]!,
+     
+     "year": testIndex["year"]!,
+     
+     "US_peak_chart_post": testIndex["US_peak_chart_post"]!
+     
+     ]) { err in
+     
+     if let err = err {
+     
+     print("Error writing document: \(err)")
+     
+     } else {
+     
+     print("Document successfully written!")
+     
+     }
+     
+     }
+     // db.collection("testdata").document(testIndex["album"]).setData(testIndex) { err in
+     
+     // if let err = err {
+     
+     // print("Error writing document: (err)")
+     
+     // } else {
+     
+     // print("Document successfully written!")
+     
+     // }
+     
+     // }
+     
+     }
+     
+     }
+     
+     
+     
+     } catch let error as NSError {
+     
+     print("Error access directory: \(error)")
+     
+     }
+     
+     
+     
+     
+     
+     return true
+     }
+     
+     
+     
+     */
 }
 

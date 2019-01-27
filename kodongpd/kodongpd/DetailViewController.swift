@@ -9,7 +9,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var wtLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var btLabel: UILabel!
-    @IBOutlet weak var naeverButton: UIButton!
+    @IBOutlet weak var naverButton: UIButton!
     
     var store: Store?
     var Name = ""
@@ -21,10 +21,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        //제대로 됐나 확인하기
-        print("내가 선택한 가게 이름은", Name)
-        
         // 이미지 뷰 하단 구분선 그리기
         let borderLayer = CALayer()
         borderLayer.backgroundColor = UIColor.lightGray.cgColor
@@ -32,7 +28,7 @@ class DetailViewController: UIViewController {
         self.imageView.layer.addSublayer(borderLayer)
     
         //가게정보 가져오기
-        storeLabel.text = Name
+        storeLabel?.text? = Name
         locationLabel.text = location
         wtLabel.text = WT
         numberLabel.text = phoneNum
@@ -76,7 +72,7 @@ class DetailViewController: UIViewController {
             //self.title = item.name
             
             // 좋아요가 눌러졌는지 좋아요 버튼에 반영
-            //likeButton.isSelected = Liked.shared.isLiked(item)
+            likeButton.isSelected = Liked.shared.isLiked(store)
         }
     }
     
