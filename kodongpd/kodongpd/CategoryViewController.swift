@@ -1,13 +1,13 @@
-
-
 import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
- @IBOutlet weak var imageView: UIImageView!
- @IBOutlet weak var collectionView: UICollectionView!
-    //카테고리 배열
-  
+ 
+    //카테고리 이미지
+    @IBOutlet weak var imageView: UIImageView!
+    //카테고리 콜렉션 뷰
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    //카테고리 배열
     override func viewDidLoad() {
         super.viewDidLoad()
         

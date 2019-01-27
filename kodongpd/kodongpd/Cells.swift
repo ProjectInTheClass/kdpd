@@ -1,6 +1,8 @@
-
 import UIKit
+
 class CategoryCell: UICollectionViewCell{
+    
+    //카테고리 이미지, 이름
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var foodLabel: UILabel!
     
@@ -11,6 +13,7 @@ class CategoryCell: UICollectionViewCell{
 }
 
 class StoreCell: UICollectionViewCell{
+    //가게들 이미지, 이름
     @IBOutlet weak var storeImage: UIImageView!
     @IBOutlet weak var storeLabel: UILabel!
     

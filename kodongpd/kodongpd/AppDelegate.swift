@@ -1,11 +1,10 @@
-
-
 import UIKit
 import Firebase
 import FirebaseDatabase
 
 var stores : [Store] = []
 
+//카테고리들 저장
 var Categories = [
     Category(name:"고기"), Category(name:"한식"),Category(name:"일식") ,Category(name:"중식"),Category(name:"해물"),
     Category(name:"양식"), Category(name:"카페"),Category(name:"디저트") ,Category(name:"간편"),Category(name:"치킨"),Category(name:"기타")
@@ -22,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let ref = Database.database().reference()
         
-        for i in 1..<127{
+        for i in 1..<128{
             
             ref.child("storeList/store\(i)").observeSingleEvent(of: .value)
                 
@@ -61,102 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
-    
-    /*
-     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-     // Override point for customization after application launch.
-     
-     FirebaseApp.configure()
-     
-     // let db = Firestore.firestore()
-     
-     
-     
-     let fileManager = FileManager()
-     
-     let desktopPath = "/Users/jeong-inho/2019iOS교육/Concentration/csvjson.json"
-     
-     
-     
-     do {
-     
-     //let contents = try fileManager.contentsOfDirectory(atPath: desktopPath)
-     // let text = try String(contentsOf: desktopPath, encoding: .utf8)
-     
-     // print(text)
-     
-     // let contents = try NSString(contentsOfFile: desktopPath, encoding: String.Encoding.utf8.rawValue)
-     
-     // print(contents)
-     
-     if let data = try String(contentsOfFile: desktopPath).data(using: .utf8){
-     
-     let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String : Any]]
-     
-     
-     
-     for testIndex in json {
-     
-     // Add a new document in collection "cities"
-     
-     db.collection("testdata").document(testIndex["album"] as! String).setData([
-     
-     "album": testIndex["album"]!,
-     
-     "year": testIndex["year"]!,
-     
-     "US_peak_chart_post": testIndex["US_peak_chart_post"]!
-     
-     ]) { err in
-     
-     if let err = err {
-     
-     print("Error writing document: \(err)")
-     
-     } else {
-     
-     print("Document successfully written!")
-     
-     }
-     
-     }
-     // db.collection("testdata").document(testIndex["album"]).setData(testIndex) { err in
-     
-     // if let err = err {
-     
-     // print("Error writing document: (err)")
-     
-     // } else {
-     
-     // print("Document successfully written!")
-     
-     // }
-     
-     // }
-     
-     }
-     
-     }
-     
-     
-     
-     } catch let error as NSError {
-     
-     print("Error access directory: \(error)")
-     
-     }
-     
-     
-     
-     
-     
-     return true
-     }
-     
-     
-     
-     */
+
 }
 
