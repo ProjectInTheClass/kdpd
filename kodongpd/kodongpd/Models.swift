@@ -29,8 +29,8 @@ class Category{
             self.name = "치킨"
         case "etc":
             self.name = "기타"
-        case "snack":
-            self.name = "분식"
+        case "beer":
+            self.name = "술"
         default:
             self.name = ""
         }

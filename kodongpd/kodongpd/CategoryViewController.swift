@@ -33,7 +33,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
         
-        cell.layer.cornerRadius = 50
+        //cell.layer.cornerRadius = 50
         cell.foodLabel.text = Categories[indexPath.row].name
         cell.foodImage.image = UIImage(named: Categories[indexPath.row].image)
         
