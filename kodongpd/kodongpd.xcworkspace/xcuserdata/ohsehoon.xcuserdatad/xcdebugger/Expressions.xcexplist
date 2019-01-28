@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LikeTableViewController.tableView(_:cellForRowAt:):LikeTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LikeTableViewController.tableView(_:numberOfRowsInSection:):LikeTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Liked.shared.saves.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

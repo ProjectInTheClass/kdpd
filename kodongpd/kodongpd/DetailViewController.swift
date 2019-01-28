@@ -17,15 +17,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var leftButton: UIButton!
     
     var store: Store?
-    
-    var Name = ""
-    var location = ""
-    var phoneNum = ""
-    var BT = ""
-    var WT = ""
-    var Map = ""
-    var p1 = ""
-    var p2 = ""
+//
+//    var Name = ""
+//    var location = ""
+//    var phoneNum = ""
+//    var BT = ""
+//    var WT = ""
+//    var Map = ""
+//    var p1 = ""
+//    var p2 = ""
 
     //사진
     var images: [String] = []
@@ -53,12 +53,12 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = store?.name
         //제대로 됐나 확인하기
-        print("내가 선택한 가게 이름은", Name)
+        //print("내가 선택한 가게 이름은", Name)
         
-        images.append(p1)
-        images.append(p2)
+        images.append((store?.photo1)!)
+        images.append((store?.photo2)!)
         
         // 초기 이미지는 첫번째 이미지이므로 왼쪽 버튼은 disabled로
         leftButton.isEnabled = false
@@ -70,12 +70,12 @@ class DetailViewController: UIViewController {
         self.imageView.layer.addSublayer(borderLayer)
     
         //가게정보 가져오기
-        storeLabel?.text? = Name
-        locationLabel.text = location
-        wtLabel.text = WT
-        numberLabel.text = phoneNum
-        btLabel.text = BT
-        imageView.pin_setImage(from: URL(string: p1))
+        storeLabel?.text = store?.name
+        locationLabel.text = store?.adr
+        wtLabel.text = store?.wt
+        numberLabel.text = store?.phoneNumber
+        btLabel.text = store?.bt
+        imageView.pin_setImage(from: URL(string: (store?.photo1)!))
     }
     
     //좋아요 저장
@@ -97,23 +97,6 @@ class DetailViewController: UIViewController {
         // 옵셔널
         if let store = store {
             storeLabel.text = store.name
-           /* userNameLabel.text = item.user.name
-            if let imageName = item.user.image {
-                userImageView.image = UIImage(named: imageName)
-            }
-            priceLabel.text = String(item.price)
-            
-            if let size = item.size {
-                depthLabel.text = "\(size.d)cm"
-                widthLabel.text = "\(size.w)cm"
-                heightLabel.text = "\(size.h)cm"
-            }
-            
-            images = item.detailImage ?? []
-            showImage(index: 0)
-            */
-            //self.title = item.name
-            
             // 좋아요가 눌러졌는지 좋아요 버튼에 반영
             likeButton.isSelected = Liked.shared.isLiked(store)
         }
@@ -124,8 +107,8 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func didTapDetail(_ sender: Any) {
-        
-        if let url = NSURL(string: Map) {
+        let Map = store?.map
+        if let url = NSURL(string: Map!) {
             if Map == "x"{
                 let MapErrorAlert = UIAlertController(title: "알림", message: "네이버 지도 정보가 없습니다.", preferredStyle: .alert)
                 let dism = UIAlertAction(title: "Ok", style: .default, handler: nil)

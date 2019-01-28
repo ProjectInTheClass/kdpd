@@ -10,7 +10,10 @@ class randomPickTableViewController: UITableViewController {
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightbutton: UIButton!
     @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var titleLable: UILabel!
    
+    var store: Store?
+    
     //사진
     var currentImageIndex = 0
     var images: [String] = []
@@ -71,8 +74,10 @@ class randomPickTableViewController: UITableViewController {
         print("viewimage개수는", images.count)
         
         //정보 나타내기
+        store = ForRec[num]
         storeName.text = ForRec[num].name
         storeCategory.text = ForRec[num].category
+        titleLable.text = "오늘 "+(store?.name)!+" 어때요?"
         foodImage.pin_setImage(from: URL(string: "\(ForRec[num].photo1)"))
 
     }
@@ -92,6 +97,31 @@ class randomPickTableViewController: UITableViewController {
       images = []
         viewDidLoad()
         
+        
+       
     }
     
+//    let a = UIButton()
+//    a.addTarget(self, action: #selector(abc), for: .touchUpInside)
+//
+//
+//    @objc func abc() {
+//        //self.store
+//    }
+//
+    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let desVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        desVC.store = store
+        //        desVC.Name = Liked.shared.saves[indexPath.row].name
+        //        print(likeStores[indexPath.row].name)
+        //        desVC.p1 = likeStores[indexPath.row].photo1
+        //
+        // desVC.p1 = store?.photo1
+        // desVC.Name = (store?.name)!
+        //desVC.location = (store?.adr)!
+        self.navigationController?.pushViewController(desVC, animated: true)
+    }
+    */
 }

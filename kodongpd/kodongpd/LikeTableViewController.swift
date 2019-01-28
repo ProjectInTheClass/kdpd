@@ -1,44 +1,40 @@
-
-
 import UIKit
-
+import PINRemoteImage
 class LikeTableViewController: UITableViewController {
- //   @IBOutlet weak var textLabel: UILabel!
- //   @IBOutlet weak var imageView: UIImageView!
+    //var likeStores: [Store] = []
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
-    
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Liked.shared.saves.count
     }
-
-    
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "LikeCell", for: indexPath)
-
+     let cell = tableView.dequeueReusableCell(withIdentifier: "LikeCell", for: indexPath) as! LikeCell //이건 무조건 UITableViewCell을 돌려주기 때문에 우리가 강제로 타입변환을 해야한다
         let item = Liked.shared.saves[indexPath.row]
+        //likeStores.append(item)
+        print(item.name)
+        cell.likeLabel.text = item.name
+        cell.likeImage.pin_setImage(from: URL(string: item.photo1))
+        cell.layer.borderWidth = 0.5
+        cell.backgroundLabel.layer.borderWidth = 0.5
+        cell.backgroundLabel.layer.cornerRadius = 0.5
         
-        cell.textLabel?.text = item.name
-        cell.imageView?.image = UIImage(named: "d")
         return cell
     }
   
-
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //셀하나의 세로길이
+        return 150
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -50,9 +46,10 @@ class LikeTableViewController: UITableViewController {
     
   
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        //likeStores.remove(at: indexPath.row)
         Liked.shared.saves.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
-        
+        tableView.reloadData()
+        //tableView.deleteRows(at: [indexPath], with: .automatic)
         /*
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -62,6 +59,20 @@ class LikeTableViewController: UITableViewController {
         }*/
     }
     
+    
+   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let desVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+       desVC.store = Liked.shared.saves[indexPath.row]
+//        desVC.Name = Liked.shared.saves[indexPath.row].name
+//        print(likeStores[indexPath.row].name)
+//        desVC.p1 = likeStores[indexPath.row].photo1
+//
+       // desVC.p1 = store?.photo1
+   // desVC.Name = (store?.name)!
+    //desVC.location = (store?.adr)!
+     self.navigationController?.pushViewController(desVC, animated: true)
+    }
 
     /*
     // Override to support rearranging the table view.

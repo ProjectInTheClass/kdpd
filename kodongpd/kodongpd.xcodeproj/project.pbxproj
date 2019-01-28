@@ -93,6 +93,7 @@
 		0C3C44DD21F0450F00749AAC /* kodongpd */ = {
 			isa = PBXGroup;
 			children = (
+				2319443E21FED2B500709F73 /* 랜덤추천 */,
 				2322759F21FDA36F00347765 /* 더보기 탭 */,
 				2322759E21FDA34500347765 /* font */,
 				0C3C44DE21F0450F00749AAC /* AppDelegate.swift */,
@@ -120,6 +121,14 @@
 				A0B38EDCA67AE82E24B4B9A8 /* Pods-kodongpd.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2319443E21FED2B500709F73 /* 랜덤추천 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "랜덤추천";
+			path = "랜덤추천";
 			sourceTree = "<group>";
 		};
 		2322759E21FDA34500347765 /* font */ = {

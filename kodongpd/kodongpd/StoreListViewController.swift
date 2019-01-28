@@ -19,10 +19,11 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = categoryName
         storeCollection.dataSource = self
         
         //확인하기
-        print("선택한 카테고리는",categoryName)
+        //print("선택한 카테고리는",categoryName)
         
         //선택한 카테고리와 동일한 가게들 선택
         for i in 0 ... (stores.count - 1){
@@ -53,14 +54,14 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         }else{
             cell.storeLabel.text = selectStoresNames[indexPath.row]
         }
-        //  cell.storeLabel.text = pick.name
         
         if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
             cell.storeImage.image = UIImage(named: "d")
         }else{
             cell.storeImage.pin_setImage(from: URL(string: pick.photo1))
         }
-        
+        cell.layer.cornerRadius = 5
+        cell.layer.borderWidth = 0.5
         return cell
     }
     
@@ -68,15 +69,15 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        
-        desVC.Name = selectStores[indexPath.row].name
-        desVC.location = selectStores[indexPath.row].adr
-        desVC.phoneNum = selectStores[indexPath.row].phoneNumber
-        desVC.WT = selectStores[indexPath.row].wt
-        desVC.BT = selectStores[indexPath.row].bt
-        desVC.Map = selectStores[indexPath.row].map
-        desVC.p1 = selectStores[indexPath.row].photo1
-        desVC.p2 = selectStores[indexPath.row].photo2
+        desVC.store = selectStores[indexPath.row]
+//        desVC.Name = selectStores[indexPath.row].name
+//        desVC.location = selectStores[indexPath.row].adr
+//        desVC.phoneNum = selectStores[indexPath.row].phoneNumber
+//        desVC.WT = selectStores[indexPath.row].wt
+//        desVC.BT = selectStores[indexPath.row].bt
+//        desVC.Map = selectStores[indexPath.row].map
+//        desVC.p1 = selectStores[indexPath.row].photo1
+//        desVC.p2 = selectStores[indexPath.row].photo2
         
         self.navigationController?.pushViewController(desVC, animated: true)
     }
