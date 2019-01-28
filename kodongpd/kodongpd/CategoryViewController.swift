@@ -35,7 +35,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         cell.layer.cornerRadius = 50
         cell.foodLabel.text = Categories[indexPath.row].name
-        cell.foodImage.image = UIImage(named: Categories[indexPath.row].name)
+        cell.foodImage.image = UIImage(named: Categories[indexPath.row].image)
         
         return cell
         

@@ -3,9 +3,39 @@ import Foundation
 
 class Category{
     var name:String
-    
+    var image:String
     init(name:String) {
-        self.name = name
+        image = name
+        switch name {
+        case "meat":
+            self.name = "고기"
+        case "korean":
+            self.name = "한식"
+        case "japanese":
+            self.name = "일식"
+        case "chinese":
+            self.name = "중식"
+        case "seafood":
+            self.name = "해물"
+        case "western":
+            self.name = "양식"
+        case "cafe":
+            self.name = "카페"
+        case "dessert":
+            self.name = "디저트"
+        case "fast":
+            self.name = "간편"
+        case "chicken":
+            self.name = "치킨"
+        case "etc":
+            self.name = "기타"
+        case "snack":
+            self.name = "분식"
+        default:
+            self.name = ""
+        }
+        
+        //self.name = name
     }
 }
 class Store{

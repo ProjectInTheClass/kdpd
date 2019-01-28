@@ -11,8 +11,8 @@ var id = 0
 
 //카테고리들 저장
 var Categories = [
-    Category(name:"고기"), Category(name:"한식"),Category(name:"일식") ,Category(name:"중식"),Category(name:"해물"),
-    Category(name:"양식"), Category(name:"카페"),Category(name:"디저트") ,Category(name:"간편"),Category(name:"치킨"),Category(name:"기타")
+    Category(name:"meat"), Category(name:"korean"),Category(name:"japanese") ,Category(name:"chinese"),Category(name:"seafood"),
+    Category(name:"western"), Category(name:"fast"),Category(name:"snack"),Category(name:"cafe"),Category(name:"dessert") ,Category(name:"chicken"),Category(name:"etc")
 ]
 
 @UIApplicationMain
@@ -40,8 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
                     
-                    if data!["category"]! != "디저트"{
-                        if data!["category"]! != "카페"{
+                    if data!["category"]! != "dessert"{
+                        if data!["category"]! != "cafe"{
                             ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
                             print (data!["category"]!)
                         }
