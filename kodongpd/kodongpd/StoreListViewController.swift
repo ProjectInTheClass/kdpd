@@ -40,7 +40,9 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
     //검색바 검색
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         searchStores = selectStores.filter({ SF-> Bool in
-            guard let text = searchBar.text else {return false}
+            
+          guard let text = searchBar.text else {return false}
+            if searchText.isEmpty{return true}
             return SF.name.contains(text)
             
         })
