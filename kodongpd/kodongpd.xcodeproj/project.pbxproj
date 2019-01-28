@@ -20,10 +20,9 @@
 		0C3C44F121F0453600749AAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C44F021F0453600749AAC /* GoogleService-Info.plist */; };
 		2385686821FCBF9600A9B07B /* Binggrae.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2385686621FCBF9600A9B07B /* Binggrae.otf */; };
 		2385686921FCBF9600A9B07B /* Binggrae-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */; };
-		402E32E821FB8BB600D4DEA0 /* sendEmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32E721FB8BB600D4DEA0 /* sendEmailTableViewController.swift */; };
-		402E32EA21FB8BD700D4DEA0 /* SSendEmailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32E921FB8BD700D4DEA0 /* SSendEmailTableViewController.swift */; };
 		402E32F021FE325500D4DEA0 /* randomPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */; };
 		402E32F421FE507600D4DEA0 /* randomDetailPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */; };
+		402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */; };
 		BDF6E04ADFD0DB8115F45C26 /* Pods_kodongpd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +42,9 @@
 		0C3C44F021F0453600749AAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2385686621FCBF9600A9B07B /* Binggrae.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Binggrae.otf; sourceTree = "<group>"; };
 		2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Binggrae-Bold.otf"; sourceTree = "<group>"; };
-		402E32E721FB8BB600D4DEA0 /* sendEmailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendEmailTableViewController.swift; sourceTree = "<group>"; };
-		402E32E921FB8BD700D4DEA0 /* SSendEmailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSendEmailTableViewController.swift; sourceTree = "<group>"; };
 		402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomPickTableViewController.swift; sourceTree = "<group>"; };
 		402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomDetailPViewController.swift; sourceTree = "<group>"; };
+		402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		9D40F6F54066858BDBEAD98E /* Pods-kodongpd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B38EDCA67AE82E24B4B9A8 /* Pods-kodongpd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.release.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.release.xcconfig"; sourceTree = "<group>"; };
 		BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kodongpd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +108,7 @@
 				0C25B09621FB032600A360ED /* LikeTableViewController.swift */,
 				402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */,
 				402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */,
+				402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */,
 			);
 			path = kodongpd;
 			sourceTree = "<group>";
@@ -143,8 +142,6 @@
 		2322759F21FDA36F00347765 /* 더보기 탭 */ = {
 			isa = PBXGroup;
 			children = (
-				402E32E721FB8BB600D4DEA0 /* sendEmailTableViewController.swift */,
-				402E32E921FB8BD700D4DEA0 /* SSendEmailTableViewController.swift */,
 			);
 			name = "더보기 탭";
 			path = "더보기 탭";
@@ -293,13 +290,12 @@
 				402E32F021FE325500D4DEA0 /* randomPickTableViewController.swift in Sources */,
 				0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */,
 				0C25B09721FB032600A360ED /* LikeTableViewController.swift in Sources */,
+				402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */,
 				402E32F421FE507600D4DEA0 /* randomDetailPViewController.swift in Sources */,
 				0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */,
 				0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */,
 				0C22DD4021F5B2A200842BB6 /* CategoryViewController.swift in Sources */,
 				0C22DD4221F5BD6E00842BB6 /* StoreListViewController.swift in Sources */,
-				402E32E821FB8BB600D4DEA0 /* sendEmailTableViewController.swift in Sources */,
-				402E32EA21FB8BD700D4DEA0 /* SSendEmailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

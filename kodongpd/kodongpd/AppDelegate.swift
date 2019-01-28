@@ -23,30 +23,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+         let ref = Database.database().reference()
         
-        let ref = Database.database().reference()
-        
-        for i in 1..<128{
+        ref.child("howManyStores").observeSingleEvent(of: .value){
+            (snapshot) in
+            var count = snapshot.value as? Int
             
-            ref.child("storeList/store\(i)").observeSingleEvent(of: .value)
+            for i in 1 ... count! {
                 
-            {(snapshot) in
-                
-                let data = snapshot.value as?
-                    [String:String]
-                
-                stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
-                
-                //랜덤추천을 위한
-                if data!["category"]! != "디저트"{
-                    if data!["category"]! != "카페"{
-                        ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
-                        
-                        print(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                ref.child("storeList/store\(i)").observeSingleEvent(of: .value)
+                    
+                {(snapshot) in
+                    
+                    let data = snapshot.value as?
+                        [String:String]
+                    
+                    stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                    
+                    if data!["category"]! != "디저트"{
+                        if data!["category"]! != "카페"{
+                            ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                            print (data!["category"]!)
+                        }
                     }
+                    
+                    
                 }
             }
             
+            print("가게의 수는", count!)
         }
         
         return true

@@ -3,15 +3,14 @@ import FirebaseDatabase
 import PINRemoteImage //use cocopods
 import SVProgressHUD
 
-class StoreListViewController:  UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
+class StoreListViewController:  UIViewController,UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate {
     var category: Category?
     
     var categoryName = "" //선택한 카테고리 이름 받아오기
     var selectStores: [Store] = [] //카테고리별 분류된 가게들
     var count = stores.count-1
     
-    var selectStoresNames = [String]()//카테고리별 분류된 가게의 이름들
-    var searchStores = [String]()//찾는 가게를 담는 배열
+    var searchStores : [Store] = []//찾는 가게를 담는 배열
     var searching = false
     
     @IBOutlet weak var storeCollection: UICollectionView!
@@ -31,11 +30,24 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
                 selectStores.append(stores[i])
             }
         }
-        for i in 0 ... (selectStores.count - 1){
-            selectStoresNames.append(selectStores[i].name)
-        }
+        
+        //검색을 위한
+        searchStores = selectStores
+        searchBar.delegate = self
+        searchBar.placeholder = "가게 검색"
         
     }
+    //검색바 검색
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        searchStores = selectStores.filter({ SF-> Bool in
+            guard let text = searchBar.text else {return false}
+            return SF.name.contains(text)
+            
+        })
+        searching = true
+        storeCollection.reloadData()
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if searching{
@@ -45,24 +57,36 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let pick = selectStores[indexPath.row]
-        let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
-        
         if searching{
-            cell.storeLabel.text = searchStores[indexPath.row]
+            
+            let pick = searchStores[indexPath.row]
+            let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
+            
+            cell.storeLabel.text = searchStores[indexPath.row].name
+            
+            if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
+                cell.storeImage.image = UIImage(named: "d")
+            }else{
+                cell.storeImage.pin_setImage(from: URL(string: searchStores[indexPath.row].photo1))
+            }
+            
+            return cell
             
         }else{
-            cell.storeLabel.text = selectStoresNames[indexPath.row]
+            
+            let pick = selectStores[indexPath.row]
+            let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
+            
+            cell.storeLabel.text = selectStores[indexPath.row].name
+            
+            if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
+                cell.storeImage.image = UIImage(named: "d")
+            }else{
+                cell.storeImage.pin_setImage(from: URL(string: pick.photo1))
+            }
+            
+            return cell
         }
-        
-        if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
-            cell.storeImage.image = UIImage(named: "d")
-        }else{
-            cell.storeImage.pin_setImage(from: URL(string: pick.photo1))
-        }
-        cell.layer.cornerRadius = 5
-        cell.layer.borderWidth = 0.5
-        return cell
     }
     
     
@@ -83,11 +107,5 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
     }
     
 }
-extension StoreListViewController: UISearchBarDelegate{
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchStores = selectStoresNames.filter({$0.prefix(searchText.count) == searchText})
-        searching = true
-        storeCollection.reloadData()
-    }
     
-}
+
