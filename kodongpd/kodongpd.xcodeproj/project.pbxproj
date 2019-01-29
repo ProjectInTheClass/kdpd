@@ -55,6 +55,9 @@
 		23437AD92200C8E700AB49C6 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23437AD82200C8E700AB49C6 /* libxml2.tbd */; };
 		23437ADB2200C8F600AB49C6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23437ADA2200C8F600AB49C6 /* libsqlite3.tbd */; };
 		23437ADE2200C9D900AB49C6 /* ObjcClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 23437ADD2200C9D900AB49C6 /* ObjcClass.m */; };
+		23437AE02200CB2B00AB49C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23437ADF2200CB2B00AB49C6 /* ViewController.swift */; };
+		23437AE22200CD2C00AB49C6 /* libstdc++.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23437AE12200CD2C00AB49C6 /* libstdc++.a */; };
+		23437AE42200CDD300AB49C6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23437AE32200CDD300AB49C6 /* libz.tbd */; };
 		2385686821FCBF9600A9B07B /* Binggrae.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2385686621FCBF9600A9B07B /* Binggrae.otf */; };
 		2385686921FCBF9600A9B07B /* Binggrae-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */; };
 		402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */; };
@@ -123,6 +126,9 @@
 		23437ADA2200C8F600AB49C6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		23437ADC2200C9D800AB49C6 /* kodongpd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kodongpd-Bridging-Header.h"; sourceTree = "<group>"; };
 		23437ADD2200C9D900AB49C6 /* ObjcClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjcClass.m; sourceTree = "<group>"; };
+		23437ADF2200CB2B00AB49C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23437AE12200CD2C00AB49C6 /* libstdc++.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libstdc++.a"; path = "../../../../Downloads/libstdc++.a"; sourceTree = "<group>"; };
+		23437AE32200CDD300AB49C6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2385686621FCBF9600A9B07B /* Binggrae.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Binggrae.otf; sourceTree = "<group>"; };
 		2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Binggrae-Bold.otf"; sourceTree = "<group>"; };
 		402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23437AE42200CDD300AB49C6 /* libz.tbd in Frameworks */,
+				23437AE22200CD2C00AB49C6 /* libstdc++.a in Frameworks */,
 				23437ADB2200C8F600AB49C6 /* libsqlite3.tbd in Frameworks */,
 				23437AD92200C8E700AB49C6 /* libxml2.tbd in Frameworks */,
 				23437AD72200C87200AB49C6 /* QuartzCore.framework in Frameworks */,
@@ -156,6 +164,8 @@
 		04CBACC9BDF72A37FBED81AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23437AE32200CDD300AB49C6 /* libz.tbd */,
+				23437AE12200CD2C00AB49C6 /* libstdc++.a */,
 				23437ADA2200C8F600AB49C6 /* libsqlite3.tbd */,
 				23437AD82200C8E700AB49C6 /* libxml2.tbd */,
 				23437AD62200C87200AB49C6 /* QuartzCore.framework */,
@@ -209,6 +219,7 @@
 				23437A892200BBFF00AB49C6 /* RandomViewController.swift */,
 				23437ADD2200C9D900AB49C6 /* ObjcClass.m */,
 				23437ADC2200C9D800AB49C6 /* kodongpd-Bridging-Header.h */,
+				23437ADF2200CB2B00AB49C6 /* ViewController.swift */,
 			);
 			path = kodongpd;
 			sourceTree = "<group>";
@@ -482,6 +493,7 @@
 				40B36E4C22007247005DE2BB /* searchViewController.swift in Sources */,
 				402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */,
 				0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */,
+				23437AE02200CB2B00AB49C6 /* ViewController.swift in Sources */,
 				23437ADE2200C9D900AB49C6 /* ObjcClass.m in Sources */,
 				0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */,
 				23437A8A2200BBFF00AB49C6 /* RandomViewController.swift in Sources */,
