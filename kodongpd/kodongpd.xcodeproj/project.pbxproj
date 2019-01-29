@@ -77,7 +77,6 @@
 		0C3C44D221F0450F00749AAC = {
 			isa = PBXGroup;
 			children = (
-				40B36E4B22007247005DE2BB /* searchViewController.swift */,
 				0C3C44DD21F0450F00749AAC /* kodongpd */,
 				0C3C44DC21F0450F00749AAC /* Products */,
 				1D7B65B9A5BDA340DBBF481C /* Pods */,
@@ -139,6 +138,7 @@
 		2322759E21FDA34500347765 /* font */ = {
 			isa = PBXGroup;
 			children = (
+				40B36E4B22007247005DE2BB /* searchViewController.swift */,
 				2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */,
 				2385686621FCBF9600A9B07B /* Binggrae.otf */,
 			);
