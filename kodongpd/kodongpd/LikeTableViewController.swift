@@ -23,17 +23,18 @@ class LikeTableViewController: UITableViewController {
         //likeStores.append(item)
         print(item.name)
         cell.likeLabel.text = item.name
+        cell.categoryLabel.text = item.category
         cell.likeImage.pin_setImage(from: URL(string: item.photo1))
-        cell.layer.borderWidth = 0.5
-        cell.backgroundLabel.layer.borderWidth = 0.5
-        cell.backgroundLabel.layer.cornerRadius = 0.5
+       // cell.layer.borderWidth = 0.5
+       // cell.backgroundLabel.layer.borderWidth = 0.5
+       // cell.backgroundLabel.layer.cornerRadius = 0.5
         
         return cell
     }
   
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //셀하나의 세로길이
-        return 150
+        return 80
     }
     /*
     // Override to support conditional editing of the table view.

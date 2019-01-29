@@ -17,7 +17,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         SVProgressHUD.dismiss(withDelay: 2.5)
         
         collectionView.dataSource = self
-        
+        collectionView.layer.cornerRadius = 20
     //오늘 뭐먹지? 이미지뷰 밑의 선 보이기
         let borderLayer = CALayer()
         borderLayer.backgroundColor = UIColor.lightGray.cgColor

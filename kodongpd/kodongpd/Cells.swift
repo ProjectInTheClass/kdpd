@@ -27,7 +27,7 @@ class LikeCell: UITableViewCell{
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var backgroundLabel: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
-
+    @IBOutlet weak var categoryLabel: UILabel!
     override func awakeFromNib() { //초기화
         super.awakeFromNib()
     }

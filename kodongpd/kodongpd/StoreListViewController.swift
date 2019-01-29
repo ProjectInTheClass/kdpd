@@ -20,7 +20,7 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         super.viewDidLoad()
         title = categoryName
         storeCollection.dataSource = self
-        
+    
         //확인하기
         //print("선택한 카테고리는",categoryName)
         
@@ -35,6 +35,7 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         searchStores = selectStores
         searchBar.delegate = self
         searchBar.placeholder = "가게 검색"
+        
         
     }
     //검색바 검색
@@ -65,7 +66,8 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
             let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
             
             cell.storeLabel.text = searchStores[indexPath.row].name
-            
+            cell.layer.borderWidth = 0.5
+            cell.layer.cornerRadius=10
             if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
                 cell.storeImage.image = UIImage(named: "d")
             }else{
@@ -80,7 +82,8 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
             let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
             
             cell.storeLabel.text = selectStores[indexPath.row].name
-            
+            cell.layer.borderWidth = 0.5
+            cell.layer.cornerRadius=10
             if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
                 cell.storeImage.image = UIImage(named: "d")
             }else{
