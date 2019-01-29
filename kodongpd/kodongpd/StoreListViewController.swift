@@ -14,7 +14,6 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
     var searching = false
     
     @IBOutlet weak var storeCollection: UICollectionView!
-    @IBOutlet var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,53 +29,13 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
                 selectStores.append(stores[i])
             }
         }
-        
-        //검색을 위한
-        searchStores = selectStores
-        searchBar.delegate = self
-        searchBar.placeholder = "가게 검색"
-        
-        
     }
-    //검색바 검색
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
-        searchStores = selectStores.filter({ SF-> Bool in
-            
-          guard let text = searchBar.text else {return false}
-            if searchText.isEmpty{return true}
-            return SF.name.contains(text)
-            
-        })
-        searching = true
-        storeCollection.reloadData()
-    }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searching{
-            return searchStores.count
-        }
         return selectStores.count
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if searching{
-            
-            let pick = searchStores[indexPath.row]
-            let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
-            
-            cell.storeLabel.text = searchStores[indexPath.row].name
-            cell.layer.borderWidth = 0.5
-            cell.layer.cornerRadius=10
-            if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
-                cell.storeImage.image = UIImage(named: "d")
-            }else{
-                cell.storeImage.pin_setImage(from: URL(string: searchStores[indexPath.row].photo1))
-            }
-            
-            return cell
-            
-        }else{
             
             let pick = selectStores[indexPath.row]
             let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
@@ -91,7 +50,7 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
             }
             
             return cell
-        }
+        
     }
     
     

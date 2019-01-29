@@ -24,6 +24,7 @@
 		402E32F421FE507600D4DEA0 /* randomDetailPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */; };
 		402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */; };
 		402E333C2200321200D4DEA0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402E333B2200321200D4DEA0 /* Launch Screen.storyboard */; };
+		40B36E4C22007247005DE2BB /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B36E4B22007247005DE2BB /* searchViewController.swift */; };
 		BDF6E04ADFD0DB8115F45C26 /* Pods_kodongpd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomDetailPViewController.swift; sourceTree = "<group>"; };
 		402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		402E333B2200321200D4DEA0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		40B36E4B22007247005DE2BB /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		9D40F6F54066858BDBEAD98E /* Pods-kodongpd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B38EDCA67AE82E24B4B9A8 /* Pods-kodongpd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.release.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.release.xcconfig"; sourceTree = "<group>"; };
 		BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kodongpd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 		0C3C44D221F0450F00749AAC = {
 			isa = PBXGroup;
 			children = (
+				40B36E4B22007247005DE2BB /* searchViewController.swift */,
 				0C3C44DD21F0450F00749AAC /* kodongpd */,
 				0C3C44DC21F0450F00749AAC /* Products */,
 				1D7B65B9A5BDA340DBBF481C /* Pods */,
@@ -294,6 +297,7 @@
 				402E32F021FE325500D4DEA0 /* randomPickTableViewController.swift in Sources */,
 				0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */,
 				0C25B09721FB032600A360ED /* LikeTableViewController.swift in Sources */,
+				40B36E4C22007247005DE2BB /* searchViewController.swift in Sources */,
 				402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */,
 				402E32F421FE507600D4DEA0 /* randomDetailPViewController.swift in Sources */,
 				0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */,

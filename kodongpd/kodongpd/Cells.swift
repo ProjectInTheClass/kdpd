@@ -31,6 +31,15 @@ class LikeCell: UITableViewCell{
     override func awakeFromNib() { //초기화
         super.awakeFromNib()
     }
-
 }
+    class searchCell: UICollectionViewCell{
+        //가게들 이미지, 이름
+        @IBOutlet weak var food: UIImageView!
+        @IBOutlet weak var name: UILabel!
+        
+        override func awakeFromNib() { //초기화
+            super.awakeFromNib()
+        }
+    }
+
 
