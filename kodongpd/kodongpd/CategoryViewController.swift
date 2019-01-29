@@ -13,8 +13,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         
         //오늘 뭐먹지? 오류를 줄이기 위해서 넣음
-        SVProgressHUD.show()
-        SVProgressHUD.dismiss(withDelay: 2.5)
+       // SVProgressHUD.show()
+        //SVProgressHUD.dismiss(withDelay: 2.5)
         
         collectionView.dataSource = self
         collectionView.layer.cornerRadius = 20

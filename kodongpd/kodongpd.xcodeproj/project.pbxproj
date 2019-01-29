@@ -23,6 +23,7 @@
 		402E32F021FE325500D4DEA0 /* randomPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */; };
 		402E32F421FE507600D4DEA0 /* randomDetailPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */; };
 		402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */; };
+		402E333C2200321200D4DEA0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402E333B2200321200D4DEA0 /* Launch Screen.storyboard */; };
 		BDF6E04ADFD0DB8115F45C26 /* Pods_kodongpd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomPickTableViewController.swift; sourceTree = "<group>"; };
 		402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomDetailPViewController.swift; sourceTree = "<group>"; };
 		402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		402E333B2200321200D4DEA0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9D40F6F54066858BDBEAD98E /* Pods-kodongpd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B38EDCA67AE82E24B4B9A8 /* Pods-kodongpd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.release.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.release.xcconfig"; sourceTree = "<group>"; };
 		BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kodongpd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				2322759E21FDA34500347765 /* font */,
 				0C3C44DE21F0450F00749AAC /* AppDelegate.swift */,
 				0C3C44E221F0450F00749AAC /* Main.storyboard */,
+				402E333B2200321200D4DEA0 /* Launch Screen.storyboard */,
 				0C3C44E521F0451000749AAC /* Assets.xcassets */,
 				0C3C44E721F0451000749AAC /* LaunchScreen.storyboard */,
 				0C3C44EA21F0451000749AAC /* Info.plist */,
@@ -213,6 +216,7 @@
 				0C3C44E621F0451000749AAC /* Assets.xcassets in Resources */,
 				0C3C44E421F0450F00749AAC /* Main.storyboard in Resources */,
 				2385686921FCBF9600A9B07B /* Binggrae-Bold.otf in Resources */,
+				402E333C2200321200D4DEA0 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

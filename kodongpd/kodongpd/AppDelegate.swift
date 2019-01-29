@@ -43,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if data!["category"]! != "dessert"{
                         if data!["category"]! != "cafe"{
                             ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
-                            print (data!["category"]!)
                         }
                     }
                     
@@ -53,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print("가게의 수는", count!)
         }
-        
+        sleep(4)
         return true
     }
     
