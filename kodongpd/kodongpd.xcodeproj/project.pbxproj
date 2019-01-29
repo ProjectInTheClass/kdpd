@@ -20,8 +20,7 @@
 		0C3C44F121F0453600749AAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C44F021F0453600749AAC /* GoogleService-Info.plist */; };
 		2385686821FCBF9600A9B07B /* Binggrae.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2385686621FCBF9600A9B07B /* Binggrae.otf */; };
 		2385686921FCBF9600A9B07B /* Binggrae-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */; };
-		402E32F021FE325500D4DEA0 /* randomPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */; };
-		402E32F421FE507600D4DEA0 /* randomDetailPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */; };
+		23ED364D2200DC9F008A689C /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED364C2200DC9F008A689C /* RandomViewController.swift */; };
 		402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */; };
 		402E333C2200321200D4DEA0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402E333B2200321200D4DEA0 /* Launch Screen.storyboard */; };
 		40B36E4C22007247005DE2BB /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B36E4B22007247005DE2BB /* searchViewController.swift */; };
@@ -44,8 +43,7 @@
 		0C3C44F021F0453600749AAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2385686621FCBF9600A9B07B /* Binggrae.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Binggrae.otf; sourceTree = "<group>"; };
 		2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Binggrae-Bold.otf"; sourceTree = "<group>"; };
-		402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomPickTableViewController.swift; sourceTree = "<group>"; };
-		402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomDetailPViewController.swift; sourceTree = "<group>"; };
+		23ED364C2200DC9F008A689C /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		402E333B2200321200D4DEA0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		40B36E4B22007247005DE2BB /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
@@ -95,8 +93,6 @@
 		0C3C44DD21F0450F00749AAC /* kodongpd */ = {
 			isa = PBXGroup;
 			children = (
-				2319443E21FED2B500709F73 /* 랜덤추천 */,
-				2322759F21FDA36F00347765 /* 더보기 탭 */,
 				2322759E21FDA34500347765 /* font */,
 				0C3C44DE21F0450F00749AAC /* AppDelegate.swift */,
 				0C3C44E221F0450F00749AAC /* Main.storyboard */,
@@ -111,9 +107,8 @@
 				0C267D6D21F70C8500524CFC /* DetailViewController.swift */,
 				0C25B09421FAF03800A360ED /* Models.swift */,
 				0C25B09621FB032600A360ED /* LikeTableViewController.swift */,
-				402E32EF21FE325500D4DEA0 /* randomPickTableViewController.swift */,
-				402E32F321FE507600D4DEA0 /* randomDetailPViewController.swift */,
 				402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */,
+				23ED364C2200DC9F008A689C /* RandomViewController.swift */,
 			);
 			path = kodongpd;
 			sourceTree = "<group>";
@@ -127,14 +122,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		2319443E21FED2B500709F73 /* 랜덤추천 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "랜덤추천";
-			path = "랜덤추천";
-			sourceTree = "<group>";
-		};
 		2322759E21FDA34500347765 /* font */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,14 +130,6 @@
 				2385686621FCBF9600A9B07B /* Binggrae.otf */,
 			);
 			path = font;
-			sourceTree = "<group>";
-		};
-		2322759F21FDA36F00347765 /* 더보기 탭 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "더보기 탭";
-			path = "더보기 탭";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,12 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C25B09521FAF03800A360ED /* Models.swift in Sources */,
-				402E32F021FE325500D4DEA0 /* randomPickTableViewController.swift in Sources */,
 				0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */,
 				0C25B09721FB032600A360ED /* LikeTableViewController.swift in Sources */,
 				40B36E4C22007247005DE2BB /* searchViewController.swift in Sources */,
 				402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */,
-				402E32F421FE507600D4DEA0 /* randomDetailPViewController.swift in Sources */,
+				23ED364D2200DC9F008A689C /* RandomViewController.swift in Sources */,
 				0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */,
 				0C3C44DF21F0450F00749AAC /* AppDelegate.swift in Sources */,
 				0C22DD4021F5B2A200842BB6 /* CategoryViewController.swift in Sources */,
