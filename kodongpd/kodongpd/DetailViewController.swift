@@ -71,10 +71,26 @@ class DetailViewController: UIViewController {
     
         //가게정보 가져오기
         storeLabel?.text = store?.name
-        locationLabel.text = store?.adr
-        wtLabel.text = store?.wt
-        numberLabel.text = store?.phoneNumber
-        btLabel.text = store?.bt
+        if store?.adr == "x" {
+            locationLabel.text = "정보없음"
+        }else{
+            locationLabel.text = store?.adr
+        }
+        if store?.wt == "x" {
+            wtLabel.text = "정보없음"
+        }else{
+             wtLabel.text = store?.wt
+        }
+        if store?.phoneNumber == "x" {
+            numberLabel.text = "정보없음"
+        }else{
+           numberLabel.text = store?.phoneNumber
+        }
+        if store?.bt == "x" {
+            btLabel.text = "정보없음"
+        }else{
+             btLabel.text = store?.bt
+        }
         imageView.pin_setImage(from: URL(string: (store?.photo1)!))
     }
     
