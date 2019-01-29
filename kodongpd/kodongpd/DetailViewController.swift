@@ -12,63 +12,39 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var btLabel: UILabel!
     @IBOutlet weak var naverButton: UIButton!
     
-    //사진 넘기기 버튼
-    @IBOutlet weak var rightButton: UIButton!
-    @IBOutlet weak var leftButton: UIButton!
     
     var store: Store?
-//
-//    var Name = ""
-//    var location = ""
-//    var phoneNum = ""
-//    var BT = ""
-//    var WT = ""
-//    var Map = ""
-//    var p1 = ""
-//    var p2 = ""
-
+    
+    
     //사진
     var images: [String] = []
-    var currentImageIndex = 0
+    var i = Int()
     
-    
-    @IBAction func showNextImage(_ sender: Any) {
-        currentImageIndex += 1
-        self.showImage(index: currentImageIndex)
-    }
-    
-    @IBAction func showPreImage(_ sender: Any) {
-        currentImageIndex -= 1
-        self.showImage(index: currentImageIndex)
-    }
-    
-    func showImage(index: Int) {
-        let imageUrl = images[index]
-        imageView.pin_setImage(from: URL(string: "\(imageUrl)"))
-        
-        // 좌/우 이미지 이동이 불가능한 상태면 버튼 상태를 disabled로
-        leftButton.isEnabled = index > 0
-        rightButton.isEnabled = index < images.count - 1
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = store?.name
-        //제대로 됐나 확인하기
-        //print("내가 선택한 가게 이름은", Name)
         
         images.append((store?.photo1)!)
         images.append((store?.photo2)!)
         
-        // 초기 이미지는 첫번째 이미지이므로 왼쪽 버튼은 disabled로
-        leftButton.isEnabled = false
+        let swipeLeftGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeLeftImage))
+        imageView.isUserInteractionEnabled=true
+        swipeLeftGesture.direction = UISwipeGestureRecognizer.Direction.left
+        imageView.addGestureRecognizer(swipeLeftGesture)
+        
+        let swipeRightGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeRightImage))
+        swipeRightGesture.direction = UISwipeGestureRecognizer.Direction.right
+        imageView.addGestureRecognizer(swipeRightGesture)
+        
         
         // 이미지 뷰 하단 구분선 그리기
         let borderLayer = CALayer()
         borderLayer.backgroundColor = UIColor.lightGray.cgColor
         borderLayer.frame = CGRect(x: 0, y: self.imageView.frame.height - 0.5, width: self.imageView.frame.width, height: 0.5)
         self.imageView.layer.addSublayer(borderLayer)
-    
+        imageView.layer.borderWidth = 0.5
+        
         //가게정보 가져오기
         storeLabel?.text = store?.name
         if store?.adr == "x" {
@@ -79,20 +55,55 @@ class DetailViewController: UIViewController {
         if store?.wt == "x" {
             wtLabel.text = "정보없음"
         }else{
-             wtLabel.text = store?.wt
+            wtLabel.text = store?.wt
         }
         if store?.phoneNumber == "x" {
             numberLabel.text = "정보없음"
         }else{
-           numberLabel.text = store?.phoneNumber
+            numberLabel.text = store?.phoneNumber
         }
         if store?.bt == "x" {
             btLabel.text = "정보없음"
         }else{
-             btLabel.text = store?.bt
+            btLabel.text = store?.bt
         }
         imageView.pin_setImage(from: URL(string: (store?.photo1)!))
     }
+    
+    @objc func SwipeLeftImage(){
+        if i<images.count-1{
+            i+=1
+            imageView.pin_setImage(from: URL(string: images[i]))
+            // imageView.image=images[i]
+        }else{
+            let MapErrorAlert = UIAlertController(title: "알림", message: "이미지가 없습니다.", preferredStyle: .alert)
+            let dism = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            MapErrorAlert.addAction(dism)
+            self.present(MapErrorAlert, animated: true, completion: nil)
+        }
+    }
+    @objc func SwipeRightImage(){
+        if i<=images.count-1 && i>0{
+            i-=1
+            imageView.pin_setImage(from: URL(string: images[i]))
+        }else{
+            let MapErrorAlert = UIAlertController(title: "알림", message: "이미지가 없습니다.", preferredStyle: .alert)
+            let dism = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            MapErrorAlert.addAction(dism)
+            self.present(MapErrorAlert, animated: true, completion: nil)
+        }
+    }
+    
+    //하고싶으니까 물어보기!
+    //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    //        self.dismiss(animated: true, completion: nil)
+    //        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+    //            imageView.contentMode = .scaleToFill
+    //            imageView.image=nil
+    //            images.insert(pickedImage, at: images.endIndex)
+    //            imageView.image = pickedImage
+    //        }
+    //    }
     
     //좋아요 저장
     @IBAction func handleLike(_ sender: Any){
@@ -137,5 +148,5 @@ class DetailViewController: UIViewController {
         }
     }
     
-
+    
 }
