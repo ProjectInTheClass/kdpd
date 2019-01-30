@@ -10,7 +10,6 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var storeName: UILabel!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    
     var store: Store?
     
     var currentImageIndex = 0

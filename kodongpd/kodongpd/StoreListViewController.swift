@@ -19,9 +19,7 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         super.viewDidLoad()
         title = categoryName
         storeCollection.dataSource = self
-    
-        //확인하기
-        //print("선택한 카테고리는",categoryName)
+
         
         //선택한 카테고리와 동일한 가게들 선택
         for i in 0 ... (stores.count - 1){
@@ -42,7 +40,7 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
             
             cell.storeLabel.text = selectStores[indexPath.row].name
             cell.layer.borderWidth = 0.5
-            cell.layer.cornerRadius=10
+            cell.layer.cornerRadius=5
             if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
                 cell.storeImage.image = UIImage(named: "d")
             }else{
@@ -58,15 +56,6 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         desVC.store = selectStores[indexPath.row]
-//        desVC.Name = selectStores[indexPath.row].name
-//        desVC.location = selectStores[indexPath.row].adr
-//        desVC.phoneNum = selectStores[indexPath.row].phoneNumber
-//        desVC.WT = selectStores[indexPath.row].wt
-//        desVC.BT = selectStores[indexPath.row].bt
-//        desVC.Map = selectStores[indexPath.row].map
-//        desVC.p1 = selectStores[indexPath.row].photo1
-//        desVC.p2 = selectStores[indexPath.row].photo2
-        
         self.navigationController?.pushViewController(desVC, animated: true)
     }
     

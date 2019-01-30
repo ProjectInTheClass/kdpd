@@ -25,9 +25,7 @@ class LikeTableViewController: UITableViewController {
         cell.likeLabel.text = item.name
         cell.categoryLabel.text = item.category
         cell.likeImage.pin_setImage(from: URL(string: item.photo1))
-       // cell.layer.borderWidth = 0.5
-       // cell.backgroundLabel.layer.borderWidth = 0.5
-       // cell.backgroundLabel.layer.cornerRadius = 0.5
+
         
         return cell
     }

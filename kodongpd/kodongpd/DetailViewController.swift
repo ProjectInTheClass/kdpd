@@ -75,22 +75,13 @@ class DetailViewController: UIViewController {
             i+=1
             imageView.pin_setImage(from: URL(string: images[i]))
             // imageView.image=images[i]
-        }else{
-            let MapErrorAlert = UIAlertController(title: "알림", message: "이미지가 없습니다.", preferredStyle: .alert)
-            let dism = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            MapErrorAlert.addAction(dism)
-            self.present(MapErrorAlert, animated: true, completion: nil)
-        }
+        }else{}
     }
     @objc func SwipeRightImage(){
         if i<=images.count-1 && i>0{
             i-=1
             imageView.pin_setImage(from: URL(string: images[i]))
         }else{
-            let MapErrorAlert = UIAlertController(title: "알림", message: "이미지가 없습니다.", preferredStyle: .alert)
-            let dism = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            MapErrorAlert.addAction(dism)
-            self.present(MapErrorAlert, animated: true, completion: nil)
         }
     }
     
