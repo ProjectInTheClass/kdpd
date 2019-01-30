@@ -439,6 +439,9 @@
                                                     <constraint firstAttribute="height" constant="44" id="uf5-Gs-HUe"/>
                                                 </constraints>
                                                 <state key="normal" image="share50"/>
+                                                <connections>
+                                                    <action selector="shareKakao:" destination="aWa-ba-aQw" eventType="touchUpInside" id="GdB-dc-da8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0A-XH-GOm">
                                                 <rect key="frame" x="313" y="0.0" width="44" height="44"/>
@@ -676,7 +679,6 @@
         <!--찜-->
         <scene sceneID="eB8-fT-Xsm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aCg-TM-Ky9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0o1-ln-olB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="찜" image="heart-1" id="UKo-OH-GQS">
                         <color key="badgeColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
@@ -691,6 +693,7 @@
                         <segue destination="rPl-QO-R9Y" kind="relationship" relationship="rootViewController" id="zAA-dz-zKd"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCg-TM-Ky9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6138.3999999999996" y="-860.41979010494754"/>
         </scene>
@@ -878,6 +881,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Ab-Sa-hYN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iVy-6e-zWh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -894,19 +898,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="2000" height="2400"/>
+        <image name="back" width="1000" height="1200"/>
         <image name="btn_heart_filled" width="16" height="16"/>
-        <image name="fullheart50" width="180" height="180"/>
-        <image name="heart" width="180" height="180"/>
-        <image name="heart-1" width="37.5" height="37.5"/>
-        <image name="menu" width="37.5" height="37.5"/>
-        <image name="more" width="48" height="48"/>
-        <image name="more-1" width="37.5" height="37.5"/>
-        <image name="naver" width="48" height="48"/>
-        <image name="recommend" width="37.5" height="37.5"/>
-        <image name="replay" width="48" height="48"/>
-        <image name="share50" width="180" height="180"/>
-        <image name="smartphone" width="48" height="48"/>
+        <image name="fullheart50" width="25" height="25"/>
+        <image name="heart" width="25" height="25"/>
+        <image name="heart-1" width="25" height="25"/>
+        <image name="menu" width="25" height="25"/>
+        <image name="more" width="32" height="32"/>
+        <image name="more-1" width="25" height="25"/>
+        <image name="naver" width="64" height="64"/>
+        <image name="recommend" width="25" height="25"/>
+        <image name="replay" width="32" height="32"/>
+        <image name="share50" width="25" height="25"/>
+        <image name="smartphone" width="30" height="30"/>
     </resources>
     <color key="tintColor" red="1" green="0.56283702873977826" blue="0.064861588622350363" alpha="0.88130539884246584" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

@@ -2,7 +2,7 @@
 import UIKit
 import PINRemoteImage
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
     //사진
     var images: [String] = []
     var i = Int()
+    
+    fileprivate var documentController: UIDocumentInteractionController?
     
     
     override func viewDidLoad() {
@@ -139,5 +141,62 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBAction func shareKakao(_ sender: Any) {
+        // Feed 타입 템플릿 오브젝트 생성
+        let template = KMTFeedTemplate { (feedTemplateBuilder) in
+            
+            // 컨텐츠
+            feedTemplateBuilder.content = KMTContentObject(builderBlock: { (contentBuilder) in
+                contentBuilder.title = "오늘 \"\((self.store?.name)!)\" 어때요?"
+                contentBuilder.desc = "#충무로 #\((self.store?.category)!)"
+                contentBuilder.imageURL = URL(string: "\((self.store?.photo1)!)")!
+                contentBuilder.link = KMTLinkObject(builderBlock: { (linkBuilder) in
+                    linkBuilder.mobileWebURL = URL(string: "https://developers.kakao.com")
+                })
+            })
+            
+            // 소셜
+            /*feedTemplateBuilder.social = KMTSocialObject(builderBlock: { (socialBuilder) in
+             socialBuilder.likeCount = 286
+             socialBuilder.commnentCount = 45
+             socialBuilder.sharedCount = 845
+             })*/
+            
+            // 버튼
+            feedTemplateBuilder.addButton(KMTButtonObject(builderBlock: { (buttonBuilder) in
+             buttonBuilder.title = "웹으로 보기"
+             buttonBuilder.link = KMTLinkObject(builderBlock: { (linkBuilder) in
+             linkBuilder.mobileWebURL = URL(string: "https://www.naver.com/")
+             })
+             }))
+            feedTemplateBuilder.addButton(KMTButtonObject(builderBlock: { (buttonBuilder) in
+                buttonBuilder.title = "앱으로 보기"
+                buttonBuilder.link = KMTLinkObject(builderBlock: { (linkBuilder) in
+                    linkBuilder.iosExecutionParams = "param1=value1&param2=value2"
+                    //   linkBuilder.androidExecutionParams = "param1=value1&param2=value2"
+                })
+            }))
+        }
+        
+        // 서버에서 콜백으로 받을 정보
+        let serverCallbackArgs = ["user_id": "abcd",
+                                  "product_id": "1234"]
+        
+        // 카카오링크 실행
+        KLKTalkLinkCenter.shared().sendDefault(with: template, serverCallbackArgs: serverCallbackArgs, success: { (warningMsg, argumentMsg) in
+            
+            // 성공
+            print("warning message: \(String(describing: warningMsg))")
+            print("argument message: \(String(describing: argumentMsg))")
+            
+        }, failure: { (error) in
+            
+            // 실패
+            //UIAlertController.showMessage(error.localizedDescription)
+            print("error \(error)")
+            
+        })
+
+    }
     
 }
