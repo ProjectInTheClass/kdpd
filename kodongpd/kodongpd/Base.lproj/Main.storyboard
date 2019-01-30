@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ab-Sa-hYN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHN-dF-o59" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6805.6000000000004" y="-1564.7676161919042"/>
+            <point key="canvasLocation" x="7744.8000000000002" y="-1564.7676161919042"/>
         </scene>
         <!--찜-->
         <scene sceneID="FVx-s5-UBU">
@@ -155,7 +155,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ot3-4d-AgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6804" y="-860.41979010494754"/>
+            <point key="canvasLocation" x="7743.1999999999998" y="-860.41979010494754"/>
         </scene>
         <!--더 보기-->
         <scene sceneID="ipF-ar-jEH">
@@ -251,7 +251,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHy-Nf-sUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LaF-qs-YDq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6806" y="462"/>
+            <point key="canvasLocation" x="7744.8000000000002" y="461.91904047976016"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Lar-aP-yDW">
@@ -320,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7d-vl-flq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7546" y="-2370"/>
+            <point key="canvasLocation" x="8486" y="-2285"/>
         </scene>
         <!--Store List View Controller-->
         <scene sceneID="roC-TH-Ztr">
@@ -410,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qp7-OW-jOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7546.3999999999996" y="-1565.6671664167918"/>
+            <point key="canvasLocation" x="8485.6000000000004" y="-1565.6671664167918"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="42r-az-YXp">
@@ -428,10 +428,38 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="YNm-Yw-FRL">
-                                <rect key="frame" x="10" y="301" width="357" height="201"/>
+                                <rect key="frame" x="10" y="301" width="357" height="249"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEd-fi-KAk">
+                                        <rect key="frame" x="0.0" y="0.0" width="357" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L6-Br-NrB">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="LBa-3T-G6m"/>
+                                                    <constraint firstAttribute="width" constant="24" id="WQW-PI-WnY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tp-k5-5D9">
+                                                <rect key="frame" x="24" y="0.0" width="333" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="F2q-ZO-KVI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="0tp-k5-5D9" firstAttribute="leading" secondItem="4L6-Br-NrB" secondAttribute="trailing" id="RKF-eB-cv1"/>
+                                            <constraint firstAttribute="centerX" secondItem="0tp-k5-5D9" secondAttribute="trailing" constant="24" id="tjW-jx-MFG"/>
+                                        </constraints>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lxk-ww-k5J">
-                                        <rect key="frame" x="0.0" y="0.0" width="357" height="44"/>
+                                        <rect key="frame" x="0.0" y="48" width="357" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7L-lh-Qcu">
                                                 <rect key="frame" x="0.0" y="0.0" width="249" height="44"/>
@@ -466,7 +494,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VYh-3q-Pdh">
-                                        <rect key="frame" x="0.0" y="68" width="357" height="108"/>
+                                        <rect key="frame" x="0.0" y="116" width="357" height="108"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="06u-mR-kpB">
                                                 <rect key="frame" x="0.0" y="0.0" width="357" height="19.5"/>
@@ -561,7 +589,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDA-Jv-DKU">
-                                        <rect key="frame" x="0.0" y="200" width="357" height="1"/>
+                                        <rect key="frame" x="0.0" y="248" width="357" height="1"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="l6E-rU-lUT"/>
@@ -577,7 +605,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="251" translatesAutoresizingMaskIntoConstraints="NO" id="RwH-cX-wjh">
-                                <rect key="frame" x="10" y="522" width="355" height="44"/>
+                                <rect key="frame" x="10" y="570" width="355" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상세 정보" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ele-im-OE3">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
@@ -639,13 +667,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZC-dc-Wf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8303.2000000000007" y="-1566.5667166416792"/>
+            <point key="canvasLocation" x="9242.3999999999996" y="-1566.5667166416792"/>
         </scene>
         <!--메뉴-->
         <scene sceneID="eIN-3n-sc5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BRa-JW-63L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="메뉴" image="menu" id="iuc-xA-j1U">
+                    <tabBarItem key="tabBarItem" title="메뉴" image="menu" selectedImage="menu-filled" id="iuc-xA-j1U">
                         <color key="badgeColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -660,13 +688,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFC-ve-RDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6138.3999999999996" y="-1564.7676161919042"/>
+            <point key="canvasLocation" x="7077.6000000000004" y="-1564.7676161919042"/>
         </scene>
         <!--더보기-->
         <scene sceneID="Sx5-gV-rdW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bOb-LO-Zry" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="더보기" image="more-1" id="M5L-Ke-hd3">
+                    <tabBarItem key="tabBarItem" title="더보기" image="more-1" selectedImage="more-full" id="M5L-Ke-hd3">
                         <color key="badgeColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -681,13 +709,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4w-7w-IQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6138.3999999999996" y="461.91904047976016"/>
+            <point key="canvasLocation" x="7077.6000000000004" y="461.91904047976016"/>
         </scene>
         <!--찜-->
         <scene sceneID="eB8-fT-Xsm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0o1-ln-olB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="찜" image="heart-1" id="UKo-OH-GQS">
+                    <tabBarItem key="tabBarItem" title="찜" image="heart-1" selectedImage="heart-full" id="UKo-OH-GQS">
                         <color key="badgeColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -702,7 +730,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCg-TM-Ky9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6138.3999999999996" y="-860.41979010494754"/>
+            <point key="canvasLocation" x="7077.6000000000004" y="-860.41979010494754"/>
         </scene>
         <!--오늘 뭐 먹지?-->
         <scene sceneID="wlX-ef-toa">
@@ -713,7 +741,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcc-Pr-Cvn">
-                                <rect key="frame" x="8" y="76" width="342" height="27"/>
+                                <rect key="frame" x="8" y="32" width="342" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Mz4-M8-Zwl"/>
                                 </constraints>
@@ -722,13 +750,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FfI-nE-F1T">
-                                <rect key="frame" x="0.0" y="119" width="375" height="272"/>
+                                <rect key="frame" x="0.0" y="75" width="375" height="272"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="272" id="Jy9-jc-1SX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU8-dR-hCQ">
-                                <rect key="frame" x="8" y="399" width="313" height="47"/>
+                                <rect key="frame" x="8" y="355" width="313" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="3RP-Cc-aWR"/>
                                 </constraints>
@@ -737,7 +765,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lb-UM-YX9">
-                                <rect key="frame" x="187.5" y="484" width="187.5" height="135"/>
+                                <rect key="frame" x="187.5" y="440" width="187.5" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="eLZ-Ue-xqa"/>
                                     <constraint firstAttribute="width" constant="187.5" id="kXb-Am-ISK"/>
@@ -747,7 +775,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P1-v3-4n1">
-                                <rect key="frame" x="0.0" y="484" width="188" height="135"/>
+                                <rect key="frame" x="0.0" y="440" width="188" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="H7j-85-BpV"/>
                                     <constraint firstAttribute="width" constant="188" id="Mco-AI-xv8"/>
@@ -758,7 +786,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DY-xs-ous">
-                                <rect key="frame" x="8" y="446" width="300" height="30"/>
+                                <rect key="frame" x="8" y="402" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="oKI-HK-1pf"/>
                                 </constraints>
@@ -823,9 +851,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3z-fi-bmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7481" y="-203"/>
+            <point key="canvasLocation" x="7745" y="-205"/>
         </scene>
-        <!--View Controller-->
+        <!--추천-->
         <scene sceneID="YmP-OD-9SZ">
             <objects>
                 <viewController id="8Q9-Xy-jil" sceneMemberID="viewController">
@@ -834,90 +862,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smK-W7-nb1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back"/>
+                                <state key="normal" image="recommendphoto"/>
                                 <connections>
                                     <segue destination="Aae-gI-ZsY" kind="show" id="A8d-P2-1xW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;오늘 뭐 먹지?&quot; 고민되면 터치!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1z-A8-kQF">
-                                <rect key="frame" x="108" y="223" width="158" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smartphone" translatesAutoresizingMaskIntoConstraints="NO" id="qsS-PI-na7">
-                                <rect key="frame" x="263" y="290" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sy4-wI-zVT"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="추천" image="recommend" selectedImage="recommend-full" id="6yU-Lb-qSq"/>
                     <navigationItem key="navigationItem" id="hAx-1W-Hjb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7x9-a4-h2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6804" y="-202.84857571214394"/>
-        </scene>
-        <!--추천-->
-        <scene sceneID="chF-kA-GKa">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mt4-Fe-Gev" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="추천" image="recommend" id="oNa-Q2-Y1U">
-                        <color key="badgeColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8qc-Zp-8If">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8Q9-Xy-jil" kind="relationship" relationship="rootViewController" id="jYu-Ha-yRK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DWO-Zb-wVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6136.8000000000002" y="-202.84857571214394"/>
+            <point key="canvasLocation" x="7076" y="-204.64767616191907"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="G9z-8B-qiW">
+        <scene sceneID="IwC-vz-6oA">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9Ab-Sa-hYN" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="X8N-zL-KaB" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iVy-6e-zWh">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RTz-p0-UeQ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BRa-JW-63L" kind="relationship" relationship="viewControllers" id="5q9-mu-FRU"/>
-                        <segue destination="0o1-ln-olB" kind="relationship" relationship="viewControllers" id="3Q9-GJ-1gA"/>
-                        <segue destination="Mt4-Fe-Gev" kind="relationship" relationship="viewControllers" id="fZx-Hq-ZWH"/>
-                        <segue destination="bOb-LO-Zry" kind="relationship" relationship="viewControllers" id="WWW-V3-rUN"/>
+                        <segue destination="BRa-JW-63L" kind="relationship" relationship="viewControllers" id="c5p-4O-Rpj"/>
+                        <segue destination="0o1-ln-olB" kind="relationship" relationship="viewControllers" id="YgT-xC-Bw1"/>
+                        <segue destination="8Q9-Xy-jil" kind="relationship" relationship="viewControllers" id="RqK-Dv-h0c"/>
+                        <segue destination="bOb-LO-Zry" kind="relationship" relationship="viewControllers" id="UPB-Pc-Hzb"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vqc-d7-i8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm7-G2-rEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5197.6000000000004" y="-551.87406296851577"/>
+            <point key="canvasLocation" x="6136.8000000000002" y="-551.87406296851577"/>
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="1000" height="1200"/>
         <image name="btn_heart_filled" width="16" height="16"/>
-        <image name="fullheart50" width="25" height="25"/>
-        <image name="heart" width="25" height="25"/>
-        <image name="heart-1" width="25" height="25"/>
-        <image name="menu" width="25" height="25"/>
-        <image name="more" width="32" height="32"/>
-        <image name="more-1" width="25" height="25"/>
-        <image name="naver" width="64" height="64"/>
-        <image name="recommend" width="25" height="25"/>
-        <image name="replay" width="32" height="32"/>
-        <image name="share50" width="25" height="25"/>
-        <image name="smartphone" width="30" height="30"/>
+        <image name="fullheart50" width="180" height="180"/>
+        <image name="heart" width="180" height="180"/>
+        <image name="heart-1" width="37.5" height="37.5"/>
+        <image name="heart-full" width="37.5" height="37.5"/>
+        <image name="menu" width="37.5" height="37.5"/>
+        <image name="menu-filled" width="37.5" height="37.5"/>
+        <image name="more" width="48" height="48"/>
+        <image name="more-1" width="37.5" height="37.5"/>
+        <image name="more-full" width="37.5" height="37.5"/>
+        <image name="naver" width="48" height="48"/>
+        <image name="recommend" width="37.5" height="37.5"/>
+        <image name="recommend-full" width="37.5" height="37.5"/>
+        <image name="recommendphoto" width="1920" height="3840"/>
+        <image name="replay" width="48" height="48"/>
+        <image name="share50" width="180" height="180"/>
     </resources>
     <color key="tintColor" red="1" green="0.56283702873977826" blue="0.064861588622350363" alpha="0.88130539884246584" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

@@ -30,7 +30,7 @@ class Category{
         case "etc":
             self.name = "기타"
         case "beer":
-            self.name = "술"
+            self.name = "술집"
         default:
             self.name = ""
         }

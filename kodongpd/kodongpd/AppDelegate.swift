@@ -11,8 +11,8 @@ var id = 0
 
 //카테고리들 저장
 var Categories = [
-    Category(name:"meat"), Category(name:"korean"),Category(name:"japanese") ,Category(name:"chinese"),Category(name:"seafood"),
-    Category(name:"western"), Category(name:"fast"),Category(name:"cafe"),Category(name:"dessert") ,Category(name:"chicken"),Category(name:"beer"),Category(name:"etc")
+    Category(name:"meat"), Category(name:"korean"),Category(name:"japanese") ,Category(name:"chinese"),Category(name:"western"),
+    Category(name:"seafood"), Category(name:"fast"),Category(name:"cafe"),Category(name:"dessert") ,Category(name:"chicken"),Category(name:"beer"),Category(name:"etc")
 ]
     var check = 0
 @UIApplicationMain
