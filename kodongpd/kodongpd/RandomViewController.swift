@@ -3,7 +3,6 @@ import UIKit
 import Foundation
 import PINRemoteImage
 class RandomViewController: UIViewController {
-    
     @IBOutlet weak var replayButton: UIButton!
     @IBOutlet weak var detailButton: UIButton!
     @IBOutlet weak var storeCategory: UILabel!
