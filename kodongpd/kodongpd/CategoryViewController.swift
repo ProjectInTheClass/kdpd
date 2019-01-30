@@ -4,7 +4,7 @@ import SVProgressHUD
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     //카테고리 이미지
-    @IBOutlet weak var imageView: UIImageView!
+   // @IBOutlet weak var imageView: UIImageView!
     //카테고리 콜렉션 뷰
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -19,11 +19,14 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         collectionView.dataSource = self
         collectionView.layer.cornerRadius = 20
     //오늘 뭐먹지? 이미지뷰 밑의 선 보이기
-        let borderLayer = CALayer()
-        borderLayer.backgroundColor = UIColor.lightGray.cgColor
-        borderLayer.frame = CGRect(x: 0, y: self.imageView.frame.height - 0.5, width: self.imageView.frame.width, height: 0.5)
-        self.imageView.layer.addSublayer(borderLayer)
+//        let borderLayer = CALayer()
+//        borderLayer.backgroundColor = UIColor.lightGray.cgColor
+//        borderLayer.frame = CGRect(x: 0, y: self.imageView.frame.height - 0.5, width: self.imageView.frame.width, height: 0.5)
+//        self.imageView.layer.addSublayer(borderLayer)
     }
+    override func viewWillAppear(_ animated: Bool) {
+         UINavigationBar.appearance().barTintColor = UIColor(red: 255, green: 177/255, blue: 76/255, alpha: 1)
+  }
 
 //카테고리셀들 보여주기
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
