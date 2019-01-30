@@ -118,6 +118,7 @@
 				0C22DD3D21F5A52800842BB6 /* Cells.swift */,
 				0C22DD3F21F5B2A200842BB6 /* CategoryViewController.swift */,
 				0C22DD4121F5BD6D00842BB6 /* StoreListViewController.swift */,
+				40B36E4B22007247005DE2BB /* searchViewController.swift */,
 				0C267D6D21F70C8500524CFC /* DetailViewController.swift */,
 				0C25B09421FAF03800A360ED /* Models.swift */,
 				0C25B09621FB032600A360ED /* LikeTableViewController.swift */,
@@ -139,7 +140,6 @@
 		2322759E21FDA34500347765 /* font */ = {
 			isa = PBXGroup;
 			children = (
-				40B36E4B22007247005DE2BB /* searchViewController.swift */,
 				2385686721FCBF9600A9B07B /* Binggrae-Bold.otf */,
 				2385686621FCBF9600A9B07B /* Binggrae.otf */,
 			);

@@ -164,12 +164,12 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
              })*/
             
             // 버튼
-            feedTemplateBuilder.addButton(KMTButtonObject(builderBlock: { (buttonBuilder) in
+            /*feedTemplateBuilder.addButton(KMTButtonObject(builderBlock: { (buttonBuilder) in
              buttonBuilder.title = "웹으로 보기"
              buttonBuilder.link = KMTLinkObject(builderBlock: { (linkBuilder) in
              linkBuilder.mobileWebURL = URL(string: "https://www.naver.com/")
              })
-             }))
+             }))*/
             feedTemplateBuilder.addButton(KMTButtonObject(builderBlock: { (buttonBuilder) in
                 buttonBuilder.title = "앱으로 보기"
                 buttonBuilder.link = KMTLinkObject(builderBlock: { (linkBuilder) in

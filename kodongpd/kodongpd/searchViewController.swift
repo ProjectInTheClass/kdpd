@@ -24,7 +24,7 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
             
             cell.name.text = searchStores[indexPath.row].name
             
-            if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
+            if pick.photo1 == "x"{
                 cell.food.image = UIImage(named: "d")
             }else{
                 cell.food.pin_setImage(from: URL(string: searchStores[indexPath.row].photo1))
@@ -39,7 +39,7 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
             
             cell.name.text = stores[indexPath.row].name
             
-            if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
+            if pick.photo1 == "x"{
                 cell.food.image = UIImage(named: "d")
             }else{
                 cell.food.pin_setImage(from: URL(string: pick.photo1))
@@ -55,7 +55,7 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
         //검색을 위한
         searchStores = stores
         searchBar.delegate = self
-        searchBar.placeholder = "가게,메뉴 검색"
+        searchBar.placeholder = "가게 검색"
     }
 
     //검색바 검색
