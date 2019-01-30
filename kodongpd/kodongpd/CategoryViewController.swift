@@ -25,8 +25,19 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 //        self.imageView.layer.addSublayer(borderLayer)
     }
     override func viewWillAppear(_ animated: Bool) {
-         UINavigationBar.appearance().barTintColor = UIColor(red: 255, green: 177/255, blue: 76/255, alpha: 1)
-  }
+        //        let shadow = NSShadow()
+        //
+        //        shadow.shadowOffset = CGSize(width: 0.4, height: 0.3)
+        //
+        //        shadow.shadowBlurRadius = 0.2
+        //
+        //        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.orange, NSAttributedString.Key.shadow : shadow]
+        
+        self.navigationController?.navigationBar.titleTextAttributes =
+            [NSAttributedString.Key.foregroundColor: UIColor.orange,
+             NSAttributedString.Key.font: UIFont(name: "Binggrae", size: 21)!]
+    }
+    
 
 //카테고리셀들 보여주기
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

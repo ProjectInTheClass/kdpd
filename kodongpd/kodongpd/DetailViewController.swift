@@ -12,6 +12,11 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
     @IBOutlet weak var btLabel: UILabel!
     @IBOutlet weak var naverButton: UIButton!
     
+   // @IBOutlet weak var scrollView: UIScrollView! 스와이프 할라면 UIScrollViewDelegate추가
+    
+    @IBOutlet weak var first: UIImageView!
+    @IBOutlet weak var second: UIImageView!
+    
     
     var store: Store?
     
@@ -26,9 +31,20 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         title = store?.name
-        
-        images.append((store?.photo1)!)
-        images.append((store?.photo2)!)
+        if store?.photo2 == "x"{
+            images.append((store?.photo1)!)
+            second.isHidden = true
+        }else{
+            images.append((store?.photo1)!)
+            images.append((store?.photo2)!)
+            
+        }
+//        scrollView.alwaysBounceVertical = false
+//        scrollView.alwaysBounceHorizontal = false
+//
+//        scrollView.minimumZoomScale = 1.0
+//        scrollView.maximumZoomScale = 2.0
+//        scrollView.delegate = self
         
         let swipeLeftGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeLeftImage))
         imageView.isUserInteractionEnabled=true
@@ -38,7 +54,7 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         let swipeRightGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeRightImage))
         swipeRightGesture.direction = UISwipeGestureRecognizer.Direction.right
         imageView.addGestureRecognizer(swipeRightGesture)
-        
+
         
         // 이미지 뷰 하단 구분선 그리기
         let borderLayer = CALayer()
@@ -72,21 +88,29 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         }
         imageView.pin_setImage(from: URL(string: (store?.photo1)!))
     }
+//    @available(iOS 2.0, *)
+//    public func viewForZooming(in scrollView: UIScrollView) ->UIView
+//    {
+//        return self.imageView
+//    }
     
     @objc func SwipeLeftImage(){
         if i<images.count-1{
             i+=1
             imageView.pin_setImage(from: URL(string: images[i]))
-            // imageView.image=images[i]
+            first.isHighlighted = true
+            second.isHighlighted = true
         }else{}
     }
     @objc func SwipeRightImage(){
         if i<=images.count-1 && i>0{
             i-=1
             imageView.pin_setImage(from: URL(string: images[i]))
-        }else{
-        }
+            second.isHighlighted = false
+            first.isHighlighted = false
+        }else{}
     }
+    
     
     //하고싶으니까 물어보기!
     //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

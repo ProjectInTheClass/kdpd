@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        UINavigationBar.appearance().barTintColor = UIColor(red: 255, green: 177/255, blue: 76/255, alpha: 1)
+       UINavigationBar.appearance().barTintColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         
         FirebaseApp.configure()
          let ref = Database.database().reference()
