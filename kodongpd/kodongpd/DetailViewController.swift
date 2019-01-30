@@ -62,6 +62,7 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         if store?.phoneNumber == "x" {
             numberLabel.text = "정보없음"
         }else{
+            numberLabel.textColor = UIColor.blue
             numberLabel.text = store?.phoneNumber
         }
         if store?.bt == "x" {
@@ -197,6 +198,11 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
             
         })
 
+    }
+    
+    @IBAction func call(_ sender: Any) {
+        let url: NSURL = URL(string: "TEL://\((store?.phoneNumber)!)")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
     }
     
 }

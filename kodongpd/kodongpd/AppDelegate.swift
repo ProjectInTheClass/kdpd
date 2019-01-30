@@ -14,12 +14,12 @@ var Categories = [
     Category(name:"meat"), Category(name:"korean"),Category(name:"japanese") ,Category(name:"chinese"),Category(name:"seafood"),
     Category(name:"western"), Category(name:"fast"),Category(name:"cafe"),Category(name:"dessert") ,Category(name:"chicken"),Category(name:"beer"),Category(name:"etc")
 ]
-
+    var check = 0
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 //        UINavigationBar.appearance().barTintColor = UIColor(red: 255, green: 177/255, blue: 76/255, alpha: 1)
         
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var count = snapshot.value as? Int
             
             for i in 1 ... count! {
-                
+
                 ref.child("storeList/store\(i)").observeSingleEvent(of: .value)
                     
                 {(snapshot) in
@@ -39,11 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let data = snapshot.value as?
                         [String:String]
                     
-                    stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                    stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)", Area: "\(data!["area"]!)"))
                     
-                    if data!["category"]! != "dessert"{
-                        if data!["category"]! != "cafe"{
-                            ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)"))
+                    if data!["category"]! != "디저트"{
+                        if data!["category"]! != "카페"{
+                            ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)", Area: "\(data!["area"]!)"))
                         }
                     }
                     

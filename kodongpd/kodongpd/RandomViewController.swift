@@ -65,7 +65,7 @@ class RandomViewController: UIViewController {
     func showImage(index: Int) {
         
         let imageUrl = images[index]
-        if imageUrl == "x" || imageUrl == "n" {
+        if imageUrl == "x" {
             foodImage.image = UIImage(named: "d")
         }else{
             foodImage.pin_setImage(from: URL(string: imageUrl))

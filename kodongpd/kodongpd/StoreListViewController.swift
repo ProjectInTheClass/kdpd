@@ -41,7 +41,7 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
             cell.storeLabel.text = selectStores[indexPath.row].name
             //cell.layer.borderWidth = 0.5
             //cell.layer.cornerRadius=5
-            if pick.photo1 == "x" || pick.photo1 == "n" || pick.photo1 == " " {
+            if pick.photo1 == "x"{
                 cell.storeImage.image = UIImage(named: "d")
             }else{
                 cell.storeImage.pin_setImage(from: URL(string: pick.photo1))

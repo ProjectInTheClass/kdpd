@@ -48,8 +48,9 @@ class Store{
     var photo1:String
     var photo2:String
     var map:String
+    var Area:String
     
-    init(category:String, name:String, phoneNumber:String, wt:String, bt:String, adr:String, photo1:String, photo2:String, map:String) {
+    init(category:String, name:String, phoneNumber:String, wt:String, bt:String, adr:String, photo1:String, photo2:String, map:String, Area:String) {
         self.category = category
         self.name = name
         self.phoneNumber = phoneNumber
@@ -59,6 +60,7 @@ class Store{
         self.photo1 = photo1
         self.photo2 = photo2
         self.map = map
+        self.Area = Area
     }
 }
 
