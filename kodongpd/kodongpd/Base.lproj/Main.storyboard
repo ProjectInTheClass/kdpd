@@ -690,12 +690,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mango" translatesAutoresizingMaskIntoConstraints="NO" id="WWc-mo-E7K">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcc-Pr-Cvn">
-                                <rect key="frame" x="8" y="66" width="342" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="여기 어때요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcc-Pr-Cvn">
+                                <rect key="frame" x="8" y="70" width="342" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Mz4-M8-Zwl"/>
                                 </constraints>
@@ -719,16 +715,6 @@
                                     <action selector="againRec:" destination="Aae-gI-ZsY" eventType="touchUpInside" id="HCy-bO-1qA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P1-v3-4n1">
-                                <rect key="frame" x="16" y="487" width="157" height="131"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="135" id="H7j-85-BpV"/>
-                                    <constraint firstAttribute="width" constant="188" id="Mco-AI-xv8"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="detailGo:" destination="Aae-gI-ZsY" eventType="touchUpInside" id="SaF-ap-Gim"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DY-xs-ous">
                                 <rect key="frame" x="8" y="449" width="296" height="30"/>
                                 <constraints>
@@ -739,25 +725,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="정보 보러 가기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gll-CS-nWf">
-                                <rect key="frame" x="40" y="568" width="108" height="23"/>
+                                <rect key="frame" x="40" y="584" width="108" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-63-o3N">
-                                <rect key="frame" x="63" y="502" width="62" height="62"/>
+                                <rect key="frame" x="63" y="514" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="다시 추천!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGc-Ij-5ZG">
-                                <rect key="frame" x="243" y="564" width="77" height="27"/>
+                                <rect key="frame" x="243" y="582" width="77" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="replay" translatesAutoresizingMaskIntoConstraints="NO" id="8bM-gT-U1E">
-                                <rect key="frame" x="250" y="502" width="62" height="62"/>
+                                <rect key="frame" x="250" y="514" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU8-dR-hCQ">
@@ -769,6 +755,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P1-v3-4n1">
+                                <rect key="frame" x="16" y="487" width="157" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="H7j-85-BpV"/>
+                                    <constraint firstAttribute="width" constant="188" id="Mco-AI-xv8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="detailGo:" destination="Aae-gI-ZsY" eventType="touchUpInside" id="SaF-ap-Gim"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -799,12 +795,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="barButton" destination="1Da-h6-z82" id="MF0-eh-xAn"/>
                         <outlet property="detailButton" destination="1P1-v3-4n1" id="dhE-6h-akh"/>
                         <outlet property="foodImage" destination="FfI-nE-F1T" id="xvq-gI-K5u"/>
-                        <outlet property="imageView" destination="WWc-mo-E7K" id="gtF-X8-4F8"/>
                         <outlet property="replayButton" destination="8lb-UM-YX9" id="UEc-yV-sEq"/>
                         <outlet property="storeCategory" destination="0DY-xs-ous" id="2VJ-ey-ocM"/>
                         <outlet property="storeName" destination="sU8-dR-hCQ" id="dc2-aT-wRb"/>
@@ -883,7 +878,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mango" width="900" height="1440"/>
         <image name="btn_heart_filled" width="16" height="16"/>
         <image name="circle" width="172.80000305175781" height="172.80000305175781"/>
         <image name="circle-full" width="172.80000305175781" height="172.80000305175781"/>

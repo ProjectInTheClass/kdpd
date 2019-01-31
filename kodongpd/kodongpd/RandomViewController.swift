@@ -10,7 +10,7 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var barButton: UIBarButtonItem!
-    @IBOutlet weak var imageView: UIImageView!
+
     @IBAction func modalDismiss(){
         self.dismiss(animated: true, completion: {
             
@@ -25,7 +25,6 @@ class RandomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        imageView.layer.opacity = 0.6
         //오늘 뭐 먹지?는 앱 로딩후 3초 뒤에 눌러야 오류가 없다.(그래서 로딩중 넣음)
         //랜덤
         let c = ForRec.count-1
@@ -53,7 +52,7 @@ class RandomViewController: UIViewController {
         store = ForRec[num]
         storeName.text = ForRec[num].name
         storeCategory.text = ForRec[num].category + " / " + ForRec[num].Area + "근처"
-        titleLabel.text = "오늘 "+(store?.name)!+" 어때요?"
+//        titleLabel.text = "오늘 "+(store?.name)!+" 어때요?"
         foodImage.pin_setImage(from: URL(string: "\(ForRec[num].photo1)"))
         
         
