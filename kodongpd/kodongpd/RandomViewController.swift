@@ -9,6 +9,14 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var storeName: UILabel!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var barButton: UIBarButtonItem!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBAction func modalDismiss(){
+        self.dismiss(animated: true, completion: {
+            
+        })
+    }
+    
     var store: Store?
     
     var currentImageIndex = 0
@@ -17,7 +25,7 @@ class RandomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        
+        imageView.layer.opacity = 0.6
         //오늘 뭐 먹지?는 앱 로딩후 3초 뒤에 눌러야 오류가 없다.(그래서 로딩중 넣음)
         //랜덤
         let c = ForRec.count-1
