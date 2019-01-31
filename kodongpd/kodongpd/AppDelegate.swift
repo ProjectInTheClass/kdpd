@@ -46,7 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     if data!["category"]! != "디저트"{
                         if data!["category"]! != "카페"{
+                            if data!["category"]! != "술집"{
                             ForRec.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)", Area: "\(data!["area"]!)"))
+                            }
                         }
                     }
                     

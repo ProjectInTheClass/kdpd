@@ -53,7 +53,12 @@ class RandomViewController: UIViewController {
         storeName.text = ForRec[num].name
         storeCategory.text = ForRec[num].category + " / " + ForRec[num].Area + "근처"
 //        titleLabel.text = "오늘 "+(store?.name)!+" 어때요?"
-        foodImage.pin_setImage(from: URL(string: "\(ForRec[num].photo1)"))
+        if ForRec[num].photo1 == "x" {
+            foodImage.image = UIImage(named: "d")
+        }else{
+            foodImage.pin_setImage(from: URL(string: "\(ForRec[num].photo1)"))
+            
+        }
         
         
         replayButton.addTarget(self, action: #selector(againRec(_:)), for: .touchUpInside)
