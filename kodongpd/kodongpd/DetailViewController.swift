@@ -11,7 +11,7 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var btLabel: UILabel!
     @IBOutlet weak var naverButton: UIButton!
-    
+    @IBOutlet weak var areaLabel: UILabel!
    // @IBOutlet weak var scrollView: UIScrollView! 스와이프 할라면 UIScrollViewDelegate추가
     
     @IBOutlet weak var first: UIImageView!
@@ -80,6 +80,15 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         }else{
             numberLabel.textColor = UIColor.blue
             numberLabel.text = store?.phoneNumber
+        }
+        if store?.Area == "x" {
+            areaLabel.isHidden = true
+        }else if store?.Area == "3"{
+            store?.Area = "남산골"
+            areaLabel.text = (store?.Area)! + "근처"
+        }
+        else{
+            areaLabel.text = (store?.Area)! + "근처"
         }
         if store?.bt == "x" {
             btLabel.text = "정보없음"

@@ -16,11 +16,7 @@ class RandomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        replayButton.layer.cornerRadius = 5
-        detailButton.layer.cornerRadius = 5
-        replayButton.layer.borderWidth = 0.3
-        detailButton.layer.borderWidth = 0.3
+   
         
         //오늘 뭐 먹지?는 앱 로딩후 3초 뒤에 눌러야 오류가 없다.(그래서 로딩중 넣음)
         //랜덤
@@ -37,12 +33,18 @@ class RandomViewController: UIViewController {
         images = []
         images.append(ForRec[num].photo1)
         images.append(ForRec[num].photo2)
-
+        
+        //지역설정
+        if ForRec[num].Area == "x" {
+            ForRec[num].Area = ""
+        }else if ForRec[num].Area == "3"{
+            ForRec[num].Area = "남산골"
+        }
         
         //정보 나타내기
         store = ForRec[num]
         storeName.text = ForRec[num].name
-        storeCategory.text = ForRec[num].category
+        storeCategory.text = ForRec[num].category + " / " + ForRec[num].Area + "근처"
         titleLabel.text = "오늘 "+(store?.name)!+" 어때요?"
         foodImage.pin_setImage(from: URL(string: "\(ForRec[num].photo1)"))
         

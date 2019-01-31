@@ -21,7 +21,15 @@ class LikeTableViewController: UITableViewController {
      let cell = tableView.dequeueReusableCell(withIdentifier: "LikeCell", for: indexPath) as! LikeCell //이건 무조건 UITableViewCell을 돌려주기 때문에 우리가 강제로 타입변환을 해야한다
         let item = Liked.shared.saves[indexPath.row]
         //likeStores.append(item)
-        let string  = item.category + " / " + item.Area + " 근처"
+        if item.Area == "x" {
+            item.Area = ""
+        }else if item.Area == "3"{
+            item.Area = "남산골" + " 근처"
+        }
+        else{
+            item.Area = item.Area + " 근처"
+        }
+        let string  = item.category + " / " + item.Area
         cell.likeLabel.text = item.name
         cell.categoryLabel.text = string
         cell.likeImage.pin_setImage(from: URL(string: item.photo1))
