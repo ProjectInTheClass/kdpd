@@ -182,7 +182,7 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
             // 컨텐츠
             feedTemplateBuilder.content = KMTContentObject(builderBlock: { (contentBuilder) in
                 contentBuilder.title = "오늘 \"\((self.store?.name)!)\" 어때요?"
-                contentBuilder.desc = "#충무로 #\((self.store?.category)!)"
+               // contentBuilder.desc = "#충무로 #\((self.store?.category)!)"
                 contentBuilder.imageURL = URL(string: "\((self.store?.photo1)!)")!
                 contentBuilder.link = KMTLinkObject(builderBlock: { (linkBuilder) in
                     linkBuilder.mobileWebURL = URL(string: "https://developers.kakao.com")

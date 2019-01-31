@@ -854,23 +854,23 @@
     </scenes>
     <resources>
         <image name="btn_heart_filled" width="16" height="16"/>
-        <image name="circle" width="172.80000305175781" height="172.80000305175781"/>
-        <image name="circle-full" width="172.80000305175781" height="172.80000305175781"/>
-        <image name="fullheart50" width="180" height="180"/>
-        <image name="heart" width="180" height="180"/>
-        <image name="heart-1" width="37.5" height="37.5"/>
-        <image name="heart-full" width="37.5" height="37.5"/>
-        <image name="menu" width="37.5" height="37.5"/>
-        <image name="menu-filled" width="37.5" height="37.5"/>
-        <image name="more" width="48" height="48"/>
-        <image name="more-1" width="37.5" height="37.5"/>
-        <image name="more-full" width="37.5" height="37.5"/>
-        <image name="naver" width="48" height="48"/>
-        <image name="recommend" width="37.5" height="37.5"/>
-        <image name="recommend-full" width="37.5" height="37.5"/>
-        <image name="recommendphoto" width="1920" height="3840"/>
-        <image name="replay" width="48" height="48"/>
-        <image name="share50" width="180" height="180"/>
+        <image name="circle" width="12" height="12"/>
+        <image name="circle-full" width="12" height="12"/>
+        <image name="fullheart50" width="25" height="25"/>
+        <image name="heart" width="25" height="25"/>
+        <image name="heart-1" width="25" height="25"/>
+        <image name="heart-full" width="25" height="25"/>
+        <image name="menu" width="25" height="25"/>
+        <image name="menu-filled" width="25" height="25"/>
+        <image name="more" width="32" height="32"/>
+        <image name="more-1" width="25" height="25"/>
+        <image name="more-full" width="25" height="25"/>
+        <image name="naver" width="64" height="64"/>
+        <image name="recommend" width="25" height="25"/>
+        <image name="recommend-full" width="25" height="25"/>
+        <image name="recommendphoto" width="960" height="1920"/>
+        <image name="replay" width="32" height="32"/>
+        <image name="share50" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="1" green="0.56283702873977826" blue="0.064861588622350363" alpha="0.88130539884246584" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
