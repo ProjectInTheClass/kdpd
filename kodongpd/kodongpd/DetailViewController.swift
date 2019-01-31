@@ -95,7 +95,13 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         }else{
             btLabel.text = store?.bt
         }
-        imageView.pin_setImage(from: URL(string: (store?.photo1)!))
+        
+        if store?.photo1 == "x"{
+            imageView.image = UIImage(named: "d")
+        }else{
+            imageView.pin_setImage(from: URL(string: (store?.photo1)!))
+            
+        }
     }
 //    @available(iOS 2.0, *)
 //    public func viewForZooming(in scrollView: UIScrollView) ->UIView
