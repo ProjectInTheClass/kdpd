@@ -34,8 +34,6 @@ class Category{
         default:
             self.name = ""
         }
-        
-        //self.name = name
     }
 }
 class Store{

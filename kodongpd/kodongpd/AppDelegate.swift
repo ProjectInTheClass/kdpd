@@ -58,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print("가게의 수는", count!)
         }
+
+        
         sleep(4)
         return true
     }

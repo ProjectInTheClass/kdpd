@@ -30,14 +30,15 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //페이지 제목
         title = store?.name
+        //2번째 사진없으면 사진몇개인지 나타내는 이미지뷰 두번째꺼 안보이게
         if store?.photo2 == "x"{
             images.append((store?.photo1)!)
             second.isHidden = true
         }else{
             images.append((store?.photo1)!)
             images.append((store?.photo2)!)
-            
         }
 //        scrollView.alwaysBounceVertical = false
 //        scrollView.alwaysBounceHorizontal = false
@@ -102,13 +103,25 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
             imageView.pin_setImage(from: URL(string: (store?.photo1)!))
             
         }
+        //전화 기능 라벨에 액션넣기
+        let tap = UITapGestureRecognizer(target: self, action: #selector(DetailViewController.tapFunction))
+        numberLabel.isUserInteractionEnabled = true
+        numberLabel.addGestureRecognizer(tap)
     }
-//    @available(iOS 2.0, *)
-//    public func viewForZooming(in scrollView: UIScrollView) ->UIView
-//    {
-//        return self.imageView
-//    }
-    
+
+    //전화기능
+    @objc
+    func tapFunction(sender:UITapGestureRecognizer) {
+        print("tap working")
+        let url: NSURL = URL(string: "TEL://\((store?.phoneNumber)!)")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        
+    }
+    //    @available(iOS 2.0, *)
+    //    public func viewForZooming(in scrollView: UIScrollView) ->UIView
+    //    {
+    //        return self.imageView
+    //    }
     @objc func SwipeLeftImage(){
         if i<images.count-1{
             i+=1
@@ -126,17 +139,6 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         }else{}
     }
     
-    
-    //하고싶으니까 물어보기!
-    //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    //        self.dismiss(animated: true, completion: nil)
-    //        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-    //            imageView.contentMode = .scaleToFill
-    //            imageView.image=nil
-    //            images.insert(pickedImage, at: images.endIndex)
-    //            imageView.image = pickedImage
-    //        }
-    //    }
     
     //좋아요 저장
     @IBAction func handleLike(_ sender: Any){
@@ -239,9 +241,11 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
 
     }
     
-    @IBAction func call(_ sender: Any) {
-        let url: NSURL = URL(string: "TEL://\((store?.phoneNumber)!)")! as NSURL
-        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-    }
+//    @IBAction func call(_ sender: Any) {
+//        let url: NSURL = URL(string: "TEL://\((store?.phoneNumber)!)")! as NSURL
+//        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+//    }
+    
+    
     
 }

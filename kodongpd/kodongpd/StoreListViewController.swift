@@ -19,8 +19,6 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         super.viewDidLoad()
         title = categoryName
         storeCollection.dataSource = self
-
-        
         //선택한 카테고리와 동일한 가게들 선택
         for i in 0 ... (stores.count - 1){
             if stores[i].category == categoryName {
@@ -39,14 +37,11 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
             let cell = storeCollection.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
             
             cell.storeLabel.text = selectStores[indexPath.row].name
-            //cell.layer.borderWidth = 0.5
-            //cell.layer.cornerRadius=5
             if pick.photo1 == "x"{
                 cell.storeImage.image = UIImage(named: "d")
             }else{
                 cell.storeImage.pin_setImage(from: URL(string: pick.photo1))
             }
-            
             return cell
         
     }

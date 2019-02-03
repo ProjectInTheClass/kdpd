@@ -2,7 +2,6 @@
 import UIKit
 
 class MoreTableViewController: UITableViewController {
-
     @IBAction func showRequestAdver(_ sender: Any) {
         if let url = NSURL(string: "https://goo.gl/forms/7YpZ7QUZhRDwjY1K2") {
             UIApplication.shared.open(url as URL)
@@ -17,9 +16,6 @@ class MoreTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-
-    
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

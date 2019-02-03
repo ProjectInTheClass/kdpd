@@ -1,7 +1,7 @@
 import UIKit
 import PINRemoteImage
 class LikeTableViewController: UITableViewController {
-    //var likeStores: [Store] = []
+    var store: Store?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,12 +29,11 @@ class LikeTableViewController: UITableViewController {
         else{
             item.Area = item.Area + " 근처"
         }
-        let string  = item.category + " / " + item.Area
+        let area = " / " + item.Area
+        let string  = item.category + area
         cell.likeLabel.text = item.name
         cell.categoryLabel.text = string
         cell.likeImage.pin_setImage(from: URL(string: item.photo1))
-
-        
         return cell
     }
   
@@ -42,18 +41,8 @@ class LikeTableViewController: UITableViewController {
         //셀하나의 세로길이
         return 80
     }
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    
   
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        //likeStores.remove(at: indexPath.row)
         Liked.shared.saves.remove(at: indexPath.row)
         tableView.reloadData()
         //tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -71,39 +60,7 @@ class LikeTableViewController: UITableViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
        desVC.store = Liked.shared.saves[indexPath.row]
-//        desVC.Name = Liked.shared.saves[indexPath.row].name
-//        print(likeStores[indexPath.row].name)
-//        desVC.p1 = likeStores[indexPath.row].photo1
-//
-       // desVC.p1 = store?.photo1
-   // desVC.Name = (store?.name)!
-    //desVC.location = (store?.adr)!
      self.navigationController?.pushViewController(desVC, animated: true)
     }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

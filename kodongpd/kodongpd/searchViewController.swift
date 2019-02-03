@@ -75,16 +75,6 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         desVC.store = searchStores[indexPath.row]
-        //        desVC.Name = selectStores[indexPath.row].name
-        //        desVC.location = selectStores[indexPath.row].adr
-        //        desVC.phoneNum = selectStores[indexPath.row].phoneNumber
-        //        desVC.WT = selectStores[indexPath.row].wt
-        //        desVC.BT = selectStores[indexPath.row].bt
-        //        desVC.Map = selectStores[indexPath.row].map
-        //        desVC.p1 = selectStores[indexPath.row].photo1
-        //        desVC.p2 = selectStores[indexPath.row].photo2
-        
         self.navigationController?.pushViewController(desVC, animated: true)
-        
     }
 }
