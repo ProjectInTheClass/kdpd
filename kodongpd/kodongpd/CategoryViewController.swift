@@ -18,9 +18,9 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         //        shadow.shadowOffset = CGSize(width: 0.4, height: 0.3)
         //        shadow.shadowBlurRadius = 0.2
         //        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.orange, NSAttributedString.Key.shadow : shadow]
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: UIColor.orange,
-             NSAttributedString.Key.font: UIFont(name: "Binggrae", size: 21)!]
+//        self.navigationController?.navigationBar.titleTextAttributes =
+//            [NSAttributedString.Key.foregroundColor: UIColor.orange,
+//             NSAttributedString.Key.font: UIFont(name: "Binggrae", size: 21)!]
     }
     
 //카테고리셀들 보여주기
