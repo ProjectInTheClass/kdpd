@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d0T-EJ-rgo">
-                                <rect key="frame" x="8" y="64" width="367" height="554"/>
+                                <rect key="frame" x="4" y="64" width="367" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="590" id="Zm5-W1-cUs"/>
@@ -234,10 +234,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WZP-Ta-Ni6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="52"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" textContentType="honorifix-prefix"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HKK-mS-hx3">
                                 <rect key="frame" x="8" y="126" width="359" height="484"/>
@@ -311,7 +315,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u1b-h2-2Jf">
-                                <rect key="frame" x="8" y="81" width="359" height="586"/>
+                                <rect key="frame" x="8" y="70" width="359" height="586"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Fsx-qa-1P5">
@@ -1001,24 +1005,45 @@
             </objects>
             <point key="canvasLocation" x="7745" y="-205"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="FuM-t6-tLe">
+            <objects>
+                <viewController id="Uhc-Vq-qsx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fYA-Qc-b51">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FJD-3E-cGM">
+                                <rect key="frame" x="0.0" y="211" width="375" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9q0-Di-cUE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAn-im-eok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7208.8000000000002" y="1333.5832083958021"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_heart_filled" width="16" height="16"/>
-        <image name="circle" width="172.80000305175781" height="172.80000305175781"/>
-        <image name="circle-full" width="172.80000305175781" height="172.80000305175781"/>
-        <image name="fullheart50" width="180" height="180"/>
-        <image name="heart" width="180" height="180"/>
-        <image name="heart-1" width="37.5" height="37.5"/>
-        <image name="heart-full" width="37.5" height="37.5"/>
-        <image name="menu" width="37.5" height="37.5"/>
-        <image name="menu-filled" width="37.5" height="37.5"/>
-        <image name="more-1" width="37.5" height="37.5"/>
-        <image name="more-full" width="37.5" height="37.5"/>
-        <image name="naver" width="48" height="48"/>
-        <image name="recommend" width="37.5" height="37.5"/>
-        <image name="recommend-full" width="37.5" height="37.5"/>
-        <image name="recommendphoto" width="1920" height="3840"/>
-        <image name="share50" width="180" height="180"/>
+        <image name="circle" width="12" height="12"/>
+        <image name="circle-full" width="12" height="12"/>
+        <image name="fullheart50" width="25" height="25"/>
+        <image name="heart" width="25" height="25"/>
+        <image name="heart-1" width="25" height="25"/>
+        <image name="heart-full" width="25" height="25"/>
+        <image name="menu" width="25" height="25"/>
+        <image name="menu-filled" width="25" height="25"/>
+        <image name="more-1" width="25" height="25"/>
+        <image name="more-full" width="25" height="25"/>
+        <image name="naver" width="64" height="64"/>
+        <image name="recommend" width="25" height="25"/>
+        <image name="recommend-full" width="25" height="25"/>
+        <image name="recommendphoto" width="960" height="1920"/>
+        <image name="share50" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="1" green="0.56283702873977826" blue="0.064861588622350363" alpha="0.88130539884246584" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

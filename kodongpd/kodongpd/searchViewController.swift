@@ -23,7 +23,7 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
             let cell = searchCollection.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as! searchCell
             
             cell.name.text = searchStores[indexPath.row].name
-            
+           // searchBar.showsCancelButton = true
             if pick.photo1 == "x"{
                 cell.food.image = UIImage(named: "d")
             }else{
@@ -44,6 +44,7 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
             }else{
                 cell.food.pin_setImage(from: URL(string: pick.photo1))
             }
+            
             return cell
         }
     }
