@@ -36,14 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                 {(snapshot) in
                     
-                    let data = snapshot.value as?
+                    var data = snapshot.value as?
                         [String:String]
                     //확인용 
-                    if (data!["category"] == nil) || data!["name"] == nil || data!["pn"] == nil || data!["wt"] == nil || data!["bt"] == nil || data!["adr"] == nil || data!["photo1"] == nil || data!["photo2"] == nil || data!["map"] == nil || data!["area"] == nil{
-                        print("nil값이 있는 항목은", data!)
-                    }
+//                    if (data!["category"] == nil) || data!["name"] == nil || data!["pn"] == nil || data!["wt"] == nil || data!["bt"] == nil || data!["adr"] == nil || data!["photo1"] == nil || data!["photo2"] == nil || data!["map"] == nil || data!["area"] == nil{
+//                        print("nil값이 있는 항목은", data!)
+//                    }
+                  
                     stores.append(Store(category: "\(data!["category"]!)", name: "\(data!["name"]!)", phoneNumber: "\(data!["pn"]!)", wt: "\(data!["wt"]!)", bt: "\(data!["bt"]!)", adr: "\(data!["adr"]!)", photo1: "\(data!["photo1"]!)", photo2: "\(data!["photo2"]!)", map: "\(data!["map"]!)", Area: "\(data!["area"]!)"))
-                    
+                  
                     if data!["category"]! != "디저트"{
                         if data!["category"]! != "카페"{
                             if data!["category"]! != "술집"{
