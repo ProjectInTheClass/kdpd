@@ -1,8 +1,11 @@
-
+import Foundation
 import UIKit
 import PINRemoteImage
+import GoogleMaps
+import CoreLocation
+import AddressBookUI
 
-class DetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate ,GMSMapViewDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
@@ -16,11 +19,13 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
     
     @IBOutlet weak var first: UIImageView!
     @IBOutlet weak var second: UIImageView!
-    
+    //지도출력을 위한 mapview
+    @IBOutlet weak var mapView: UIView!
     
     var store: Store?
-    
-    
+    //지도 위도 경도 값 초기화
+    var original_latitude : CLLocationDegrees = 0.0
+    var original_longtitude : CLLocationDegrees = 0.0
     //사진
     var images: [String] = []
     var i = Int()
@@ -32,6 +37,35 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         super.viewDidLoad()
         //페이지 제목
         title = store?.name
+        //지도 사용
+        GMSServices.provideAPIKey("AIzaSyAfLzLFmrAbPi35kMKIyYGttdTRhWqvNeA")
+        CLGeocoder().geocodeAddressString((store?.adr)!, completionHandler: {(placemarks, error) in
+            if error != nil{
+                print(error)
+                return
+            }
+            if (placemarks?.count)! > 0{
+                let placemark = placemarks?[0]
+                let location = placemark?.location
+                let coordinate = location?.coordinate
+                print(coordinate?.latitude)
+                print(coordinate?.longitude)
+                self.original_latitude = coordinate!.latitude
+                self.original_longtitude = coordinate!.longitude
+                
+                
+                let camera = GMSCameraPosition.camera(withLatitude: self.original_latitude as! CLLocationDegrees, longitude: self.original_longtitude as! CLLocationDegrees, zoom: 18)
+                let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+                let position = CLLocationCoordinate2D(latitude: self.original_latitude, longitude: self.original_longtitude)
+                let marker = GMSMarker(position: position)
+                marker.title = "대한극장"
+                self.mapView = mapView
+                marker.map = mapView
+            }
+        })
+        
+        
+        
         //2번째 사진없으면 사진몇개인지 나타내는 이미지뷰 두번째꺼 안보이게
         if store?.photo2 == "x"{
             images.append((store?.photo1)!)
