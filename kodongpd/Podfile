@@ -12,7 +12,5 @@ target 'kodongpd' do
   pod 'PINRemoteImage', '3.0.0-beta.13'
   pod 'SVProgressHUD', '~> 2.2'
   pod 'Alamofire', '5.0.0.beta.1'
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
   
 end
