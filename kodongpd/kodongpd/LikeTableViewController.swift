@@ -2,13 +2,8 @@ import UIKit
 import PINRemoteImage
 class LikeTableViewController: UITableViewController {
     var store: Store?
-    var string = ""
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        //구분선 없애기
-        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -25,18 +20,20 @@ class LikeTableViewController: UITableViewController {
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      let cell = tableView.dequeueReusableCell(withIdentifier: "LikeCell", for: indexPath) as! LikeCell //이건 무조건 UITableViewCell을 돌려주기 때문에 우리가 강제로 타입변환을 해야한다
         let item = Liked.shared.saves[indexPath.row]
-        if item.Area == "3"{
-            item.Area = "남산골"
+        //likeStores.append(item)
+        if item.Area == "x" {
+            item.Area = ""
+        }else if item.Area == "3"{
+            item.Area = "남산골" + " 근처"
         }
-        if item.Area != "x"{
-             string = item.category + " / " + item.Area
-        }else{
-            string = item.category
+        else{
+            item.Area = item.Area + " 근처"
         }
+        let area = " / " + item.Area
+        let string  = item.category + area
         cell.likeLabel.text = item.name
         cell.categoryLabel.text = string
         cell.likeImage.pin_setImage(from: URL(string: item.photo1))
-
         return cell
     }
   
