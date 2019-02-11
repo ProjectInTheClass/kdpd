@@ -9,20 +9,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-       // collectionView.layer.cornerRadius = 5
+    }
 
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        //네비게이션 바 꾸미기
-        //        let shadow = NSShadow()
-        //        shadow.shadowOffset = CGSize(width: 0.4, height: 0.3)
-        //        shadow.shadowBlurRadius = 0.2
-        //        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.orange, NSAttributedString.Key.shadow : shadow]
-        self.navigationController?.navigationBar.titleTextAttributes =
-            [NSAttributedString.Key.foregroundColor: UIColor.orange,
-             NSAttributedString.Key.font: UIFont(name: "Binggrae", size: 21)!]
-    }
-    
 //카테고리셀들 보여주기
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Categories.count
