@@ -403,7 +403,7 @@
                                                     <constraint firstAttribute="width" constant="44" id="gNn-aJ-qH3"/>
                                                     <constraint firstAttribute="height" constant="44" id="uf5-Gs-HUe"/>
                                                 </constraints>
-                                                <state key="normal" image="kakaotalk"/>
+                                                <state key="normal" image="share50"/>
                                                 <connections>
                                                     <action selector="shareKakao:" destination="aWa-ba-aQw" eventType="touchUpInside" id="GdB-dc-da8"/>
                                                 </connections>
@@ -1029,7 +1029,6 @@
         <image name="heart" width="25" height="25"/>
         <image name="heart-1" width="25" height="25"/>
         <image name="heart-full" width="25" height="25"/>
-        <image name="kakaotalk" width="32" height="32"/>
         <image name="menu" width="25" height="25"/>
         <image name="menu-filled" width="25" height="25"/>
         <image name="more-1" width="25" height="25"/>
