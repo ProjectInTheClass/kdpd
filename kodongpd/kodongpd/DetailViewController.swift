@@ -1,10 +1,13 @@
-
+import Foundation
 import UIKit
 import PINRemoteImage
+import GoogleMaps
+import CoreLocation
+import AddressBookUI
 
-class DetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DetailViewController: UIViewController, UIDocumentInteractionControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate ,GMSMapViewDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var storeLabel: UILabel!
+  //  @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var wtLabel: UILabel!
@@ -12,15 +15,17 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
     @IBOutlet weak var btLabel: UILabel!
     @IBOutlet weak var naverButton: UIButton!
     @IBOutlet weak var areaLabel: UILabel!
-   // @IBOutlet weak var scrollView: UIScrollView! 스와이프 할라면 UIScrollViewDelegate추가
+    // @IBOutlet weak var scrollView: UIScrollView! 스와이프 할라면 UIScrollViewDelegate추가
     
     @IBOutlet weak var first: UIImageView!
     @IBOutlet weak var second: UIImageView!
-    
-    
+    //지도출력을 위한 mapview
+    @IBOutlet weak var mapView: UIView!
+   @IBOutlet weak var mapGo: UIButton!
     var store: Store?
-    
-    
+    //지도 위도 경도 값 초기화
+    var original_latitude : CLLocationDegrees = 0.0
+    var original_longtitude : CLLocationDegrees = 0.0
     //사진
     var images: [String] = []
     var i = Int()
@@ -32,6 +37,35 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         super.viewDidLoad()
         //페이지 제목
         title = store?.name
+        
+        //지도 사용
+        GMSServices.provideAPIKey("AIzaSyAfLzLFmrAbPi35kMKIyYGttdTRhWqvNeA")
+        CLGeocoder().geocodeAddressString((store?.adr)!, completionHandler: {(placemarks, error) in
+            if error != nil{
+                return
+            }
+            if (placemarks?.count)! > 0{
+                let placemark = placemarks?[0]
+                let location = placemark?.location
+                let coordinate = location?.coordinate
+                print(coordinate?.latitude)
+                print(coordinate?.longitude)
+                self.original_latitude = coordinate!.latitude
+                self.original_longtitude = coordinate!.longitude
+                
+                
+                let camera = GMSCameraPosition.camera(withLatitude: self.original_latitude as! CLLocationDegrees, longitude: self.original_longtitude as! CLLocationDegrees, zoom: 18)
+                let mapView = GMSMapView.map(withFrame:  CGRect(x: 0, y: 0, width: self.mapView.frame.size.width , height: self.mapView.frame.size.height), camera: camera)
+                let position = CLLocationCoordinate2D(latitude: self.original_latitude, longitude: self.original_longtitude)
+                let marker = GMSMarker(position: position)
+                marker.title = "대한극장"
+                self.mapView.addSubview(mapView)
+                marker.map = mapView
+            }
+        })
+        
+        
+        
         //2번째 사진없으면 사진몇개인지 나타내는 이미지뷰 두번째꺼 안보이게
         if store?.photo2 == "x"{
             images.append((store?.photo1)!)
@@ -40,13 +74,13 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
             images.append((store?.photo1)!)
             images.append((store?.photo2)!)
         }
-//        scrollView.alwaysBounceVertical = false
-//        scrollView.alwaysBounceHorizontal = false
-//
-//        scrollView.minimumZoomScale = 1.0
-//        scrollView.maximumZoomScale = 2.0
-//        scrollView.delegate = self
-        
+        //        scrollView.alwaysBounceVertical = false
+        //        scrollView.alwaysBounceHorizontal = false
+        //
+        //        scrollView.minimumZoomScale = 1.0
+        //        scrollView.maximumZoomScale = 2.0
+        //        scrollView.delegate = self
+         //스와이프 코드
         let swipeLeftGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeLeftImage))
         imageView.isUserInteractionEnabled=true
         swipeLeftGesture.direction = UISwipeGestureRecognizer.Direction.left
@@ -55,7 +89,7 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         let swipeRightGesture=UISwipeGestureRecognizer(target: self, action: #selector(SwipeRightImage))
         swipeRightGesture.direction = UISwipeGestureRecognizer.Direction.right
         imageView.addGestureRecognizer(swipeRightGesture)
-
+        
         
         // 이미지 뷰 하단 구분선 그리기
         let borderLayer = CALayer()
@@ -65,7 +99,7 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         imageView.layer.borderWidth = 0.5
         
         //가게정보 가져오기
-        storeLabel?.text = store?.name
+       // storeLabel?.text = store?.name
         if store?.adr == "x" {
             locationLabel.text = "정보없음"
         }else{
@@ -108,7 +142,7 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         numberLabel.isUserInteractionEnabled = true
         numberLabel.addGestureRecognizer(tap)
     }
-
+    
     //전화기능
     @objc
     func tapFunction(sender:UITapGestureRecognizer) {
@@ -138,8 +172,23 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
             first.isHighlighted = false
         }else{}
     }
+    @IBAction func sendMap(_ sender: UIButton) {
+        performSegue(withIdentifier: "mapViewSegue", sender: self)
+    }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "mapViewSegue"{
+            
+            let naviVC = segue.destination as! UINavigationController
+            let mapVC = naviVC.topViewController as! MapViewController
+            
+            mapVC.location_name = (store?.adr)!
+            
+        }
+    }
+
+//
     //좋아요 저장
     @IBAction func handleLike(_ sender: Any){
         if let store = self.store{
@@ -154,11 +203,9 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
         }
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         // 옵셔널
         if let store = store {
-            storeLabel.text = store.name
             // 좋아요가 눌러졌는지 좋아요 버튼에 반영
             likeButton.isSelected = Liked.shared.isLiked(store)
         }
@@ -186,11 +233,9 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
     @IBAction func shareKakao(_ sender: Any) {
         // Feed 타입 템플릿 오브젝트 생성
         let template = KMTFeedTemplate { (feedTemplateBuilder) in
-            
             // 컨텐츠
             feedTemplateBuilder.content = KMTContentObject(builderBlock: { (contentBuilder) in
                 contentBuilder.title = "오늘 \"\((self.store?.name)!)\" 어때요?"
-               // contentBuilder.desc = "#충무로 #\((self.store?.category)!)"
                 contentBuilder.imageURL = URL(string: "\((self.store?.photo1)!)")!
                 contentBuilder.link = KMTLinkObject(builderBlock: { (linkBuilder) in
                     linkBuilder.mobileWebURL = URL(string: "https://developers.kakao.com")
@@ -238,14 +283,6 @@ class DetailViewController: UIViewController, UIDocumentInteractionControllerDel
             print("error \(error)")
             
         })
-
+        
     }
-    
-//    @IBAction func call(_ sender: Any) {
-//        let url: NSURL = URL(string: "TEL://\((store?.phoneNumber)!)")! as NSURL
-//        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
-//    }
-    
-    
-    
 }
