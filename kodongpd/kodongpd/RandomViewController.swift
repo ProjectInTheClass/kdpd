@@ -4,7 +4,7 @@ import Foundation
 import UIKit
 import PINRemoteImage
 class RandomViewController: UIViewController, UIDocumentInteractionControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var replayButton: UIButton!
+     @IBOutlet weak var replayButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!

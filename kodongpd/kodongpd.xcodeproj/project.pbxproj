@@ -27,7 +27,7 @@
 		40AF7BC82201D3BF00E92CEE /* KakaoLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AF7BC52201D3BE00E92CEE /* KakaoLink.framework */; };
 		40AF7BC92201D3BF00E92CEE /* KakaoCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40AF7BC62201D3BF00E92CEE /* KakaoCommon.framework */; };
 		40B36E4C22007247005DE2BB /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B36E4B22007247005DE2BB /* searchViewController.swift */; };
-		B511488F22108D0800F8707D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511488E22108D0800F8707D /* MapViewController.swift */; };
+		B511485322100AC300F8707D /* View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B511485222100AC300F8707D /* View Controller.swift */; };
 		BDF6E04ADFD0DB8115F45C26 /* Pods_kodongpd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 		40B36E4B22007247005DE2BB /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
 		9D40F6F54066858BDBEAD98E /* Pods-kodongpd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B38EDCA67AE82E24B4B9A8 /* Pods-kodongpd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kodongpd.release.xcconfig"; path = "Pods/Target Support Files/Pods-kodongpd/Pods-kodongpd.release.xcconfig"; sourceTree = "<group>"; };
-		B511488E22108D0800F8707D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B511485222100AC300F8707D /* View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Controller.swift"; sourceTree = "<group>"; };
 		BA2CE5356A8EB84B451C2FB6 /* Pods_kodongpd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kodongpd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 				0C25B09621FB032600A360ED /* LikeTableViewController.swift */,
 				402E32F921FEFB2500D4DEA0 /* MoreTableViewController.swift */,
 				23ED364C2200DC9F008A689C /* RandomViewController.swift */,
-				B511488E22108D0800F8707D /* MapViewController.swift */,
+				B511485222100AC300F8707D /* View Controller.swift */,
 			);
 			path = kodongpd;
 			sourceTree = "<group>";
@@ -314,11 +314,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B511488F22108D0800F8707D /* MapViewController.swift in Sources */,
 				0C25B09521FAF03800A360ED /* Models.swift in Sources */,
 				0C267D6E21F70C8500524CFC /* DetailViewController.swift in Sources */,
 				0C25B09721FB032600A360ED /* LikeTableViewController.swift in Sources */,
 				40B36E4C22007247005DE2BB /* searchViewController.swift in Sources */,
+				B511485322100AC300F8707D /* View Controller.swift in Sources */,
 				402E32FA21FEFB2500D4DEA0 /* MoreTableViewController.swift in Sources */,
 				23ED364D2200DC9F008A689C /* RandomViewController.swift in Sources */,
 				0C22DD3E21F5A52800842BB6 /* Cells.swift in Sources */,

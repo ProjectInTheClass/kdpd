@@ -52,6 +52,7 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //검색을 위한
         searchStores = stores
         searchBar.delegate = self

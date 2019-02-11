@@ -20,7 +20,6 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         title = categoryName
         storeCollection.dataSource = self
         //선택한 카테고리와 동일한 가게들 선택
-        
         for i in 0 ... (stores.count - 1){
             if stores[i].category == categoryName {
                 selectStores.append(stores[i])
@@ -46,12 +45,15 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
             return cell
         
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let desVC = mainStoryboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         desVC.store = selectStores[indexPath.row]
         self.navigationController?.pushViewController(desVC, animated: true)
     }
+    
 }
     
 
