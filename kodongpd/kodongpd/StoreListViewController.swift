@@ -53,7 +53,15 @@ class StoreListViewController:  UIViewController,UICollectionViewDataSource, UIC
         desVC.store = selectStores[indexPath.row]
         self.navigationController?.pushViewController(desVC, animated: true)
     }
+ 
     
+    func collectionView(_ collectionView: UICollectionView, layoutcollectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        let cellsAcross: CGFloat = 2
+        let spaceBetweenCells: CGFloat = 10
+        let dim = (collectionView.bounds.width - (cellsAcross - 1) * spaceBetweenCells)/cellsAcross
+        return CGSize(width: dim, height: dim)
+        //return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
 }
     
 

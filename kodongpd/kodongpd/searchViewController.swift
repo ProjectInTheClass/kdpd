@@ -57,6 +57,7 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
         searchStores = stores
         searchBar.delegate = self
         searchBar.placeholder = "가게 검색"
+        searchBar.showsCancelButton = false
     }
 
     //검색바 검색
@@ -71,6 +72,29 @@ class searchViewController: UIViewController,UICollectionViewDataSource, UIColle
         searching = true
         searchCollection.reloadData()
     }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searching = true
+        searchBar.showsCancelButton = true
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.endEditing(true)
+        searchBar.showsCancelButton = false
+
+    }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.endEditing(true)
+        searchBar.showsCancelButton = false
+
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.endEditing(true)
+        searchBar.showsCancelButton = false
+
+    }
+    //now how to show cancel button in search bar
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
